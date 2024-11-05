@@ -1,0 +1,44 @@
+.mt-16 {
+  margin-top: 6rem;
+}
+
+.mt-10 {
+  margin-top: 10rem;
+}
+
+.tournament-img {
+  width: 25%;
+}
+
+.tabs-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow-x: auto;
+  padding: 0 1rem;
+}
+
+.tabs-container button {
+  flex: 1;
+  min-width: 80px;
+  margin: 4px;
+  padding: 12px;
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.tabs-container button:hover {
+  background-color: #e0e0e0;
+}
+
+.tabs-container button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #007bff;
+}
+
+.tabs-container button.active {
+  border-bottom: 2px solid #007bff;
+  color: #007bff;
+}

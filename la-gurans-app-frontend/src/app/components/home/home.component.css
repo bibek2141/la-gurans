@@ -1,0 +1,9 @@
+.mt-16 {
+  margin-top: 4rem;
+}
+
+.hero {
+  background-size: contain; /* Use contain to avoid zooming */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  height: 50vh; /* Takes the full height of the viewport */
+}

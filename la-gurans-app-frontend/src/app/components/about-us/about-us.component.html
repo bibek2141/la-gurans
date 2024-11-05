@@ -1,0 +1,68 @@
+<section class="container flex flex-col items-center mt-16">
+  <!-- Hero Image Section -->
+  <div class="flex w-full justify-center h-auto md:h-auto">
+    <div class="w-full md:w-1/2">
+      <img
+        src="img4.jpg"
+        alt="Team Spirit"
+        class="w-full h-64 mt-8 md:h-96 object-cover"
+      />
+      <p class="text-center text-white bg-black bg-opacity-50 py-2">
+        ANA Soccer Cup 2024, San Francisco
+      </p>
+    </div>
+  </div>
+
+  <div class="text-center mt-6 px-4"></div>
+
+  <section class="bg-sky-600 text-white py-12 px-6 text-center">
+    <h1 class="text-5xl font-bold mb-6 text-black">About LA Gurans</h1>
+    <p class="mt-2 text-lg mb-6 text-white font-semibold italic">
+      Uniting Talent, Spirit, and Victory
+    </p>
+    <p class="text-lg leading-relaxed">
+      Welcome to LA Gurans! Our team is driven by passion, teamwork, and a
+      commitment to excellence on and off the field. LA Gurans is a group of
+      soccer enthusiasts with the goal of having active social involvement in
+      Los Angeles while being one of the most competitive Nepalese soccer teams
+      in the US.
+    </p>
+
+    <div class="mt-10">
+      <h2 class="text-3xl text-black font-bold mb-4">Our Journey</h2>
+      <p class="text-md text-white-700">
+        Since our founding, LA Gurans has grown from a local favorite to a
+        formidable force, competing with the best and delivering memorable
+        performances. Our fans are our heartbeat, and together, we’ve set
+        records and reached milestones.
+      </p>
+    </div>
+
+    <div class="mt-10">
+      <h2 class="text-3xl font-bold text-black mb-4">Core Values</h2>
+      <ul class="flex flex-wrap justify-center gap-6 text-center">
+        <li class="bg-white text-black px-6 py-4 rounded-lg w-40">Integrity</li>
+        <li class="bg-white text-black px-6 py-4 rounded-lg w-40">Teamwork</li>
+        <li class="bg-white text-black px-6 py-4 rounded-lg w-40">
+          Resilience
+        </li>
+        <li class="bg-white text-black px-6 py-4 rounded-lg w-40">Passion</li>
+      </ul>
+    </div>
+  </section>
+  <h2 class="text-3xl font-bold text-black mb-4 mt-4">
+    Previous Participations
+  </h2>
+  <section class="pt-4">
+    <ngb-carousel mt-4 [interval]="5000">
+      <ng-template ngbSlide *ngFor="let slide of slides">
+        <div class="carousel-image-container">
+          <img [src]="slide.image" alt="Slide image" />
+        </div>
+        <div class="carousel-caption">
+          <h5>{{ slide.caption }}</h5>
+        </div>
+      </ng-template>
+    </ngb-carousel>
+  </section>
+</section>

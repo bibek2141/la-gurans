@@ -1,0 +1,30 @@
+.mt-16 {
+  margin-top: 6rem;
+}
+
+.carousel-image-container {
+  height: 450px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-image-container img {
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.5s ease;
+}
+
+@media (min-width: 768px) {
+  .md\:h-96 {
+    height: 29rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-image-container {
+    height: 350px;
+  }
+}
