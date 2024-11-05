@@ -3,7 +3,7 @@
 }
 
 .hero {
-  background-size: contain; /* Use contain to avoid zooming */
-  background-repeat: no-repeat; /* Prevents the image from repeating */
-  height: 50vh; /* Takes the full height of the viewport */
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 50vh;
 }
