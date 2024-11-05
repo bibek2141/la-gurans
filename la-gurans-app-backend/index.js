@@ -43,5 +43,6 @@ app.post("/api/contact", async (req, res) => {
   }
 });
 
-// // Export as a serverless function
-// module.exports = app;
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
+});
