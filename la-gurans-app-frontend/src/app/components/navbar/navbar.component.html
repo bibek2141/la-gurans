@@ -76,6 +76,7 @@
         <li>
           <a
             [routerLink]="'/about-us'"
+            (click)="closeMenu()"
             [ngClass]="{
               'text-slate-950': isActive('/about-us'),
               'text-white-300': !isActive('/about-us')
@@ -88,6 +89,7 @@
         <li>
           <a
             [routerLink]="'/tournament'"
+            (click)="closeMenu()"
             [ngClass]="{
               ' text-slate-950': isActive('/tournament'),
               'text-white-300': !isActive('/tournament'),
@@ -100,6 +102,7 @@
         <li>
           <a
             [routerLink]="'/members'"
+            (click)="closeMenu()"
             [ngClass]="{
               ' text-slate-950': isActive('/members'),
               'text-white-300': !isActive('/members')

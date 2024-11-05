@@ -23,6 +23,11 @@ export class NavbarComponent {
   }
 
   contactUs() {
+    this.isMenuOpen = false;
     this._router.navigate(['/contact-us']);
+  }
+
+  closeMenu() {
+    this.isMenuOpen = false;
   }
 }
