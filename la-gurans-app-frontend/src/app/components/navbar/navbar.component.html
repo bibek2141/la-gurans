@@ -1,0 +1,133 @@
+<nav
+  class="bg-sky-600 dark:bg-gray-900 fixed w-full z-20 top-0 border-b border-gray-200 dark:border-gray-600 shadow-md"
+>
+  <div
+    class="max-w-screen-xl mx-auto p-4 flex flex-wrap items-center justify-between"
+  >
+    <!-- Logo and Title -->
+    <a [routerLink]="'/'" class="flex pt-4 items-center space-x-3">
+      <div class="flex items-center">
+        <img
+          src="/logo.jpg"
+          class="w-12 h-12 rounded-full shadow-lg hover:scale-105 transition-transform duration-200"
+          alt="LA Gurans"
+        />
+        <span
+          class="ml-3 text-2xl font-semibold text-white dark:text-white"
+          [ngClass]="{
+            'text-slate-950': isActive('/'),
+            'text-white-300': !isActive('/')
+          }"
+        >
+          LA GURANS
+        </span>
+      </div>
+    </a>
+
+    <!-- Buttons -->
+    <div class="flex items-center space-x-4 md:order-2">
+      <!-- Mobile Menu Toggle Button -->
+      <button
+        (click)="toggleMenu()"
+        type="button"
+        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 bg-gray-100 rounded-lg md:hidden hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 transition-colors duration-200"
+        aria-controls="navbar-sticky"
+        aria-expanded="false"
+      >
+        <span class="sr-only">Open main menu</span>
+        <svg
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Navbar Links -->
+    <div
+      [ngClass]="{ hidden: !isMenuOpen }"
+      class="w-full md:flex md:w-auto md:order-1 items-center"
+      id="navbar-sticky"
+    >
+      <ul
+        class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-8 mt-4 md:mt-0"
+      >
+        <!-- <li>
+          <a
+            [routerLink]="'/'"
+            [ngClass]="{
+              'bg-blue-800 text-white': isActive('/'),
+              'text-gray-300': !isActive('/')
+            }"
+            class="block py-2 px-3 text-lg text-white rounded transition-colors duration-200"
+          >
+            Home
+          </a>
+        </li> -->
+        <li>
+          <a
+            [routerLink]="'/about-us'"
+            [ngClass]="{
+              'text-slate-950': isActive('/about-us'),
+              'text-white-300': !isActive('/about-us')
+            }"
+            class="block py-2 px-3 text-lg text-white rounded transition-colors duration-200"
+          >
+            About us
+          </a>
+        </li>
+        <li>
+          <a
+            [routerLink]="'/tournament'"
+            [ngClass]="{
+              ' text-slate-950': isActive('/tournament'),
+              'text-white-300': !isActive('/tournament'),
+            }"
+            class="block py-2 px-3 text-lg text-white rounded md:hover:text-blue-200 duration-200"
+          >
+            Tournament
+          </a>
+        </li>
+        <li>
+          <a
+            [routerLink]="'/members'"
+            [ngClass]="{
+              ' text-slate-950': isActive('/members'),
+              'text-white-300': !isActive('/members')
+            }"
+            class="block py-2 px-3 text-lg text-white rounded transition-colors duration-200"
+          >
+            Members
+          </a>
+        </li>
+        <li class="md:hidden">
+          <button
+            type="button"
+            (click)="contactUs()"
+            class="text-white text-lg w-45 bg-black hover:bg-black-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg px-5 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 transition-colors duration-200 text-center"
+          >
+            Contact Us
+          </button>
+        </li>
+      </ul>
+    </div>
+    <div class="hidden md:block md:order-2">
+      <button
+        type="button"
+        (click)="contactUs()"
+        class="text-white text-lg bg-black hover:bg-black focus:outline-none font-medium rounded-lg px-5 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 transition-colors duration-200"
+      >
+        Contact Us
+      </button>
+    </div>
+  </div>
+</nav>
