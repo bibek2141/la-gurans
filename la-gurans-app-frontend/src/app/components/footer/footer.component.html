@@ -3,16 +3,18 @@
     class="max-w-screen-xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between"
   >
     <div class="text-center md:text-left mb-4 md:mb-0">
-      <div class="flex items-center mb-3">
-        <img
-          src="/logo.jpg"
-          class="w-12 h-12 rounded-full shadow-lg hover:scale-105 transition-transform duration-200"
-          alt="LA Gurans"
-        />
-        <span class="ml-3 text-2xl font-semibold text-white dark:text-white">
-          LA GURANS
-        </span>
-      </div>
+      <a [routerLink]="'/'" class="flex pt-4 items-center space-x-3">
+        <div class="flex items-center">
+          <img
+            src="/logo.jpg"
+            class="w-12 h-12 rounded-full shadow-lg hover:scale-105 transition-transform duration-200"
+            alt="LA Gurans"
+          />
+          <span class="ml-3 text-2xl font-semibold text-white dark:text-white">
+            LA GURANS
+          </span>
+        </div>
+      </a>
       <p class="text-white">Connecting People and Communities</p>
     </div>
     <div class="flex space-x-4 mb-4 md:mb-0">
