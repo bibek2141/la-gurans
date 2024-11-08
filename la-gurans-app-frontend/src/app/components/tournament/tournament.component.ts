@@ -11,6 +11,16 @@ import { Fixture } from '../../models/fixtures.model';
 })
 export class TournamentComponent {
   selectedTab: string = 'fixtures';
+  selectedMainTab: string = 'regular';
+
+  selectMainTab(tab: string) {
+    this.selectedMainTab = tab;
+    this.selectedTab = 'fixtures';
+  }
+
+  selectTab(tab: string) {
+    this.selectedTab = tab;
+  }
   standingsGroups = [
     [
       { name: 'Team A (1)', points: 6, played: 3 },
@@ -31,6 +41,20 @@ export class TournamentComponent {
       { name: 'Team J (10)', points: 6, played: 3 },
       { name: 'Team K (11)', points: 3, played: 3 },
       { name: 'Team L (12)', points: 0, played: 3 },
+    ],
+  ];
+  standingsGroups35 = [
+    [
+      { name: 'Team A (1)', points: 9, played: 3 },
+      { name: 'Team B (2)', points: 6, played: 3 },
+      { name: 'Team C (3)', points: 3, played: 3 },
+      { name: 'Team D (4)', points: 0, played: 3 },
+    ],
+    [
+      { name: 'Team E (5)', points: 9, played: 3 },
+      { name: 'Team F (6)', points: 6, played: 3 },
+      { name: 'Team G (7)', points: 3, played: 3 },
+      { name: 'Team H (8)', points: 0, played: 3 },
     ],
   ];
 
@@ -66,6 +90,38 @@ export class TournamentComponent {
       field2: 'D11 vs D12',
     },
   ];
+  fixtures35: Fixture[] = [
+    {
+      time: '8:30 - 9:25',
+      field1: 'A1 vs A2',
+      field2: 'B5 vs B6',
+    },
+    {
+      time: '9:30 - 10:25',
+      field1: 'A3 vs A4',
+      field2: 'B7 vs B8',
+    },
+    {
+      time: '10:30 - 11:25',
+      field1: 'A1 vs A3',
+      field2: 'B5 vs B7',
+    },
+    {
+      time: '11:30 - 12:25',
+      field1: 'A2 vs A4',
+      field2: 'B6 vs B8',
+    },
+    {
+      time: '12:30 - 1:25',
+      field1: 'A1 vs A4',
+      field2: 'B5 vs B6',
+    },
+    {
+      time: '2:30 - 3:25',
+      field1: 'A2 vs A3',
+      field2: 'B6 vs B7',
+    },
+  ];
 
   fixtures2: Fixture[] = [
     {
@@ -94,6 +150,21 @@ export class TournamentComponent {
     },
   ];
 
+  fixtures235: Fixture[] = [
+    {
+      time: '8:30 - 9:30',
+      field1: '(Winner of A vs Runner up of B) - C',
+      field2: '(Winner of B vs Runner up of A) - D',
+    },
+  ];
+  fixtures335: Fixture[] = [
+    {
+      time: '1:00 - 2:00',
+      field1: '(Winner of C vs Winner of D)',
+      field2: '',
+    },
+  ];
+
   results = [
     { fixture: 'A1 vs A2', result: '' },
     { fixture: 'B4 vs B5', result: '' },
@@ -115,7 +186,22 @@ export class TournamentComponent {
     { fixture: 'Winner of W vs Winner of X', result: '' },
     { fixture: 'Winner of Y vs Winner of Z', result: '' },
   ];
-  selectTab(tab: string) {
-    this.selectedTab = tab;
-  }
+
+  results35 = [
+    { fixture: 'A1 vs A2', result: '' },
+    { fixture: 'B5 vs B6', result: '' },
+    { fixture: 'A3 vs A4', result: '' },
+    { fixture: 'B7 vs B8', result: '' },
+    { fixture: 'A1 vs A3', result: '' },
+    { fixture: 'B5 vs B7', result: '' },
+    { fixture: 'A2 vs A4', result: '' },
+    { fixture: 'B6 vs B8', result: '' },
+    { fixture: 'A1 vs A4', result: '' },
+    { fixture: 'B5 vs B6', result: '' },
+    { fixture: 'A1 vs A4', result: '' },
+    { fixture: 'B6 vs B7', result: '' },
+    { fixture: 'Winner of A vs Runner up of B', result: '' },
+    { fixture: 'Winner of B vs Runner up of C', result: '' },
+    { fixture: 'Winner of C vs Runner up of D', result: '' },
+  ];
 }
