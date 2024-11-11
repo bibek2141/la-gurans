@@ -12,6 +12,7 @@ export class ContactService {
   constructor(private http: HttpClient) {}
 
   sendContactForm(data: any): Observable<any> {
+    console.log(this.apiUrl);
     return this.http.post<any>(this.apiUrl, data, {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
     });
