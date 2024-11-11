@@ -62,10 +62,11 @@
         ngModel
         required
         rows="4"
+        #message="ngModel"
         class="mt-2 w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
       ></textarea>
       <div
-        *ngIf="email.invalid && email.touched"
+        *ngIf="message.invalid && message.touched"
         class="text-red-300 text-sm mt-1"
       >
         Please enter message.
