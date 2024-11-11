@@ -24,7 +24,7 @@
       />
       <div
         *ngIf="name.invalid && name.touched"
-        class="text-red-500 text-sm mt-1"
+        class="text-red-300 text-sm mt-1"
       >
         Please enter a valid name (letters and spaces only).
       </div>
@@ -46,7 +46,7 @@
       />
       <div
         *ngIf="email.invalid && email.touched"
-        class="text-red-500 text-sm mt-1"
+        class="text-red-300 text-sm mt-1"
       >
         Please enter a valid email address.
       </div>
@@ -79,7 +79,6 @@
     </button>
   </form>
 
-  <!-- Success and error messages -->
   <div *ngIf="successMessage" class="text-center text-green-500 mt-4">
     {{ successMessage }}
   </div>
