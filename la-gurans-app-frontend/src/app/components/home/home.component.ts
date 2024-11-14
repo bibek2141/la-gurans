@@ -10,10 +10,12 @@ import { RouterModule } from '@angular/router';
   styleUrl: './home.component.css',
 })
 export class HomeComponent {
-  members: Member[] = Array.from({ length: 4 }, (_, i) => ({
-    name: `Member ${i + 1}`,
-    position: `Position ${i + 1}`,
-  }));
+  members: Member[] = [
+    { name: 'Amit Gurung', position: 'Member' },
+    { name: 'Prajwol Shakya', position: 'Member' },
+    { name: 'Samarpan Prasai', position: 'Member' },
+    { name: 'Ronal Dhungel', position: 'Member' },
+  ];
   scrollToTop(): void {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
