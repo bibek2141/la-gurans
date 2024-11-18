@@ -38,7 +38,9 @@
           *ngIf="showGeneralRules"
           class="mt-4 p-4 text-gray-700 bg-gray-50 border border-gray-200 rounded-lg mb-3"
         >
-          <ul>
+          <ul
+            class="list-disc list-inside space-y-2 pl-5 text-gray-700 text-base"
+          >
             <li>
               All players must wear shin guards or will not be allowed to play.
             </li>
@@ -69,7 +71,9 @@
           *ngIf="showTournamentRules"
           class="mt-4 p-4 text-gray-700 bg-gray-50 border border-gray-200 rounded-lg mb-3"
         >
-          <ul>
+          <ul
+            class="list-disc list-inside space-y-2 pl-5 text-gray-700 text-base"
+          >
             <li>Duration of the game - 20 minute halves for all game.</li>
             <li>Substitutions can be made on the fly.</li>
             <li>Unlimited substitutions allowed.</li>
@@ -111,7 +115,9 @@
           *ngIf="showKickOffRules"
           class="mt-4 p-4 text-gray-700 bg-gray-50 border border-gray-200 rounded-lg mb-3"
         >
-          <ul>
+          <ul
+            class="list-disc list-inside space-y-2 pl-5 text-gray-700 text-base"
+          >
             <li>Kick-offs may be kicked in any direction.</li>
             <li>Goals can be scored from anywhere on the field.</li>
             <li>
@@ -139,7 +145,9 @@
           *ngIf="showGoalScoringRules"
           class="mt-4 p-4 text-gray-700 bg-gray-50 border border-gray-200 rounded-lg mb-3"
         >
-          <ul>
+          <ul
+            class="list-disc list-inside space-y-2 pl-5 text-gray-700 text-base"
+          >
             <li>Goals can be scored from any point on the field.</li>
             <li>
               Hand balls result in penalty kicks at the referee's discretion.
@@ -165,7 +173,9 @@
           class="mt-4 p-4 text-gray-700 bg-gray-50 border border-gray-200 rounded-lg mb-3"
         >
           <p>The following tiebreakers will decide who the winner is:</p>
-          <ol>
+          <ul
+            class="list-disc list-inside space-y-2 pl-5 text-gray-700 text-base"
+          >
             <li>Points</li>
             <li>Head-to-head</li>
             <li>Goal Differential</li>
@@ -177,7 +187,7 @@
               the goal differential, goals scored or goals against will decide
               who wins.
             </li>
-          </ol>
+          </ul>
         </div>
       </div>
     </div>
@@ -251,8 +261,9 @@
       </div>
       <div *ngIf="selectedTab === 'fixtures'">
         <h2 class="text-3xl font-bold text-center pt-4 text-gray-800">
-          Fixtures **Subjected to Change**
+          Fixtures
         </h2>
+        <span>**Subjected to Change**</span>
         <p class="mt-2 mb-3"><b>Day 1</b></p>
         <h6>Group Stage</h6>
         <div class="overflow-x-auto">
@@ -465,8 +476,9 @@
       </div>
       <div *ngIf="selectedTab === 'fixtures'">
         <h2 class="text-3xl pt-4 font-bold text-center text-gray-800">
-          35+ Fixtures **Subjected to Change**
+          35+ Fixtures
         </h2>
+        <span>**Subjected to Change**</span>
         <p class="mt-2 mb-3"><b>Day 1</b></p>
         <h6>Group Stage</h6>
         <div class="overflow-x-auto">
