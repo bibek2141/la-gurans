@@ -17,18 +17,170 @@
   </div>
 
   <div class="py-8 px-4 bg-gray-100">
-    <h2 class="text-3xl font-bold text-center text-gray-800">
-      Rules and Regulations
-    </h2>
-    <p>TBA</p>
-    <!-- <ul class="mt-4 list-disc list-inside space-y-2 text-lg text-gray-600">
-      <li>All players must be registered prior to the tournament.</li>
-      <li>Matches will be played according to standard rules.</li>
-      <li>Fair play and sportsmanship are mandatory.</li>
-      <li>
-        Teams must report to their assigned fields 15 minutes before match time.
-      </li>
-    </ul> -->
+    <div class="rules-container">
+      <h2 class="title">Rules and Regulations</h2>
+      <p class="subtitle">**Subjected to Change**</p>
+
+      <div>
+        <button
+          (click)="toggleSection('generalRules')"
+          class="flex items-center justify-between w-full px-4 py-3 text-lg font-semibold text-white bg-sky-600 border rounded-lg transition-all duration-300 hover:bg-sky-600"
+        >
+          <span>General Rules</span>
+          <span
+            class="inline-block transition-transform transform"
+            [class.-rotate-180]="showGeneralRules"
+          >
+            ▼
+          </span>
+        </button>
+        <div
+          *ngIf="showGeneralRules"
+          class="mt-4 p-4 text-gray-700 bg-gray-50 border border-gray-200 rounded-lg mb-3"
+        >
+          <ul>
+            <li>
+              All players must wear shin guards or will not be allowed to play.
+            </li>
+            <li>All players must wear jerseys/shirts during play.</li>
+            <li>
+              Players wearing protective casts must receive written approval by
+              the Tournament director.
+            </li>
+            <li>No jewelry allowed except medical bracelets.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div>
+        <button
+          (click)="toggleSection('tournamentRules')"
+          class="flex items-center justify-between w-full px-4 py-3 text-lg font-semibold text-white bg-sky-600 border rounded-lg transition-all duration-300 hover:bg-sky-600"
+        >
+          <span>Tournament Rules</span>
+          <span
+            class="inline-block transition-transform transform"
+            [class.-rotate-180]="showTournamentRules"
+          >
+            ▼
+          </span>
+        </button>
+        <div
+          *ngIf="showTournamentRules"
+          class="mt-4 p-4 text-gray-700 bg-gray-50 border border-gray-200 rounded-lg mb-3"
+        >
+          <ul>
+            <li>Duration of the game - 20 minute halves for all game.</li>
+            <li>Substitutions can be made on the fly.</li>
+            <li>Unlimited substitutions allowed.</li>
+            <li>
+              Balls crossing the touch-line on the ground or in the air will be
+              put in play via kick-in. Defending players must provide a 5 yard
+              distance from the point of occurrence.
+            </li>
+            <li>No slide tackling.</li>
+            <li>
+              Free Kicks- defending players may set up a wall 7 yards from the
+              point of infraction.
+            </li>
+            <li>
+              <strong>Referees</strong>- There will be no abuse of the referees
+              tolerate, verbal or otherwise. Any indication of such behavior by
+              a coach or parent will result in immediate removal from the
+              tournament site. No verbal abuse of any player, coach or referee
+              will be tolerated.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div>
+        <button
+          (click)="toggleSection('kickOffRules')"
+          class="flex items-center justify-between w-full px-4 py-3 text-lg font-semibold text-white bg-sky-600 border rounded-lg transition-all duration-300 hover:bg-sky-600"
+        >
+          <span>Kick Off / Kick Ins Rules</span>
+          <span
+            class="inline-block transition-transform transform"
+            [class.-rotate-180]="showKickOffRules"
+          >
+            ▼
+          </span>
+        </button>
+        <div
+          *ngIf="showKickOffRules"
+          class="mt-4 p-4 text-gray-700 bg-gray-50 border border-gray-200 rounded-lg mb-3"
+        >
+          <ul>
+            <li>Kick-offs may be kicked in any direction.</li>
+            <li>Goals can be scored from anywhere on the field.</li>
+            <li>
+              Ball crossing the sideline will be put in play via kick-in.
+              Defending players must maintain a 5-yard distance.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div>
+        <button
+          (click)="toggleSection('goalScoringRules')"
+          class="flex items-center justify-between w-full px-4 py-3 text-lg font-semibold text-white bg-sky-600 border rounded-lg transition-all duration-300 hover:bg-sky-600"
+        >
+          <span>Goal Scoring Rules</span>
+          <span
+            class="inline-block transition-transform transform"
+            [class.-rotate-180]="showGoalScoringRules"
+          >
+            ▼
+          </span>
+        </button>
+        <div
+          *ngIf="showGoalScoringRules"
+          class="mt-4 p-4 text-gray-700 bg-gray-50 border border-gray-200 rounded-lg mb-3"
+        >
+          <ul>
+            <li>Goals can be scored from any point on the field.</li>
+            <li>
+              Hand balls result in penalty kicks at the referee's discretion.
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <button
+          (click)="toggleSection('tiebreakerRules')"
+          class="flex items-center justify-between w-full px-4 py-3 text-lg font-semibold text-white bg-sky-600 border rounded-lg transition-all duration-300 hover:bg-sky-600"
+        >
+          <span>Tie Breaker Rules</span>
+          <span
+            class="inline-block transition-transform transform"
+            [class.-rotate-180]="showTieBreakerRules"
+          >
+            ▼
+          </span>
+        </button>
+        <div
+          *ngIf="showTieBreakerRules"
+          class="mt-4 p-4 text-gray-700 bg-gray-50 border border-gray-200 rounded-lg mb-3"
+        >
+          <p>The following tiebreakers will decide who the winner is:</p>
+          <ol>
+            <li>Points</li>
+            <li>Head-to-head</li>
+            <li>Goal Differential</li>
+            <li>Goals against</li>
+            <li>Goal scored</li>
+            <li>Shoot-out</li>
+            <li>
+              When there are 3 teams with the same amount of points (3-way tie)
+              the goal differential, goals scored or goals against will decide
+              who wins.
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div class="py-8 px-4">
@@ -99,7 +251,7 @@
       </div>
       <div *ngIf="selectedTab === 'fixtures'">
         <h2 class="text-3xl font-bold text-center pt-4 text-gray-800">
-          Fixtures
+          Fixtures **Subjected to Change**
         </h2>
         <p class="mt-2 mb-3"><b>Day 1</b></p>
         <h6>Group Stage</h6>
@@ -313,7 +465,7 @@
       </div>
       <div *ngIf="selectedTab === 'fixtures'">
         <h2 class="text-3xl pt-4 font-bold text-center text-gray-800">
-          35+ Fixtures
+          35+ Fixtures **Subjected to Change**
         </h2>
         <p class="mt-2 mb-3"><b>Day 1</b></p>
         <h6>Group Stage</h6>

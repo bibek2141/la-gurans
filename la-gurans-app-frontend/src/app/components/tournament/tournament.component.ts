@@ -204,4 +204,34 @@ export class TournamentComponent {
     { fixture: 'Winner of B vs Runner up of C', result: '' },
     { fixture: 'Winner of C vs Runner up of D', result: '' },
   ];
+
+  // Track visibility for each section
+  showGeneralRules = false;
+  showSubstitutionRules = false;
+  showKickOffRules = false;
+  showGoalScoringRules = false;
+  showTieBreakerRules = false;
+  showTournamentRules = false;
+
+  toggleSection(section: string): void {
+    switch (section) {
+      case 'generalRules':
+        this.showGeneralRules = !this.showGeneralRules;
+        break;
+      case 'kickOffRules':
+        this.showKickOffRules = !this.showKickOffRules;
+        break;
+      case 'goalScoringRules':
+        this.showGoalScoringRules = !this.showGoalScoringRules;
+        break;
+      case 'tiebreakerRules':
+        this.showTieBreakerRules = !this.showTieBreakerRules;
+        break;
+      case 'tournamentRules':
+        this.showTournamentRules = !this.showTournamentRules;
+        break;
+      default:
+        break;
+    }
+  }
 }
