@@ -26,7 +26,7 @@
           (click)="toggleSection('generalRules')"
           class="flex items-center justify-between w-full px-4 py-3 text-lg font-semibold text-white bg-sky-600 border rounded-lg transition-all duration-300 hover:bg-sky-600"
         >
-          <span>General Rules</span>
+          <span class="px-2">General Rules</span>
           <span
             class="inline-block transition-transform transform"
             [class.-rotate-180]="showGeneralRules"
@@ -59,7 +59,7 @@
           (click)="toggleSection('tournamentRules')"
           class="flex items-center justify-between w-full px-4 py-3 text-lg font-semibold text-white bg-sky-600 border rounded-lg transition-all duration-300 hover:bg-sky-600"
         >
-          <span>Tournament Rules</span>
+          <span class="px-2">Tournament Rules</span>
           <span
             class="inline-block transition-transform transform"
             [class.-rotate-180]="showTournamentRules"
@@ -103,7 +103,7 @@
           (click)="toggleSection('kickOffRules')"
           class="flex items-center justify-between w-full px-4 py-3 text-lg font-semibold text-white bg-sky-600 border rounded-lg transition-all duration-300 hover:bg-sky-600"
         >
-          <span>Kick Off / Kick Ins Rules</span>
+          <span class="px-2">Kick Off / Kick Ins Rules</span>
           <span
             class="inline-block transition-transform transform"
             [class.-rotate-180]="showKickOffRules"
@@ -133,7 +133,7 @@
           (click)="toggleSection('goalScoringRules')"
           class="flex items-center justify-between w-full px-4 py-3 text-lg font-semibold text-white bg-sky-600 border rounded-lg transition-all duration-300 hover:bg-sky-600"
         >
-          <span>Goal Scoring Rules</span>
+          <span class="px-2">Goal Scoring Rules</span>
           <span
             class="inline-block transition-transform transform"
             [class.-rotate-180]="showGoalScoringRules"
@@ -160,7 +160,7 @@
           (click)="toggleSection('tiebreakerRules')"
           class="flex items-center justify-between w-full px-4 py-3 text-lg font-semibold text-white bg-sky-600 border rounded-lg transition-all duration-300 hover:bg-sky-600"
         >
-          <span>Tie Breaker Rules</span>
+          <span class="px-2">Tie Breaker Rules</span>
           <span
             class="inline-block transition-transform transform"
             [class.-rotate-180]="showTieBreakerRules"
@@ -251,46 +251,93 @@
 
   <div class="py-8 px-4">
     <div *ngIf="selectedMainTab === 'regular'">
-      <div class="py-8 px-4 bg-gray-100">
-        <h2 class="text-3xl font-bold text-center text-gray-800">
-          Regular Registered Team
-        </h2>
-        <ul class="mt-4 list-disc list-inside space-y-2 text-lg text-gray-600">
-          <li>LA Gurans</li>
+      <div class="py-8 px-4 text-white bg-sky-600">
+        <button
+          (click)="toggleSection('teamsRoster')"
+          class="flex items-center justify-between w-full px-4 py-3 text-lg font-semibold text-white bg-sky-600 transition-all duration-300 hover:bg-sky-600"
+        >
+          <h2 class="text-3xl font-bold text-center px-2">
+            Regular Registered Team
+          </h2>
+          <span
+            class="inline-block transition-transform transform"
+            [class.-rotate-180]="showTeams"
+          >
+            ▼
+          </span>
+        </button>
+        <ul
+          *ngIf="showTeams"
+          class="grid grid-cols-1 gap-4 mt-4 text-lg text-white"
+        >
+          <li
+            *ngFor="let team of teamsRegular; let i = index"
+            class="flex flex-col p-4 rounded-lg shadow-md bg-white text-black"
+          >
+            <div class="flex items-center justify-between">
+              <span>{{ team.name }}</span>
+              <button
+                (click)="toggleRoster(i)"
+                class="w-6 h-6 text-white bg-sky-600 border border-sky-600 rounded-full hover:bg-sky-600 focus:ring-2 focus:ring-sky-600"
+              >
+                <span
+                  class="transform transition-transform"
+                  [class.rotate-45]="showRosterIndex === i"
+                >
+                  +
+                </span>
+              </button>
+            </div>
+            <ul
+              *ngIf="showRosterIndex === i"
+              class="mt-2 pl-5 list-disc list-inside space-y-2 text-gray-500"
+            >
+              <li *ngFor="let player of team.roster">{{ player }}</li>
+            </ul>
+          </li>
         </ul>
       </div>
-      <div *ngIf="selectedTab === 'fixtures'">
-        <h2 class="text-3xl font-bold text-center pt-4 text-gray-800">
-          Fixtures
-        </h2>
+      <div
+        *ngIf="selectedTab === 'fixtures'"
+        class="mt-3 bg-sky-600 text-white px-2 pb-2"
+      >
+        <h2 class="text-3xl font-bold text-center pt-4 text-white">Fixtures</h2>
         <span>**Subject to Change**</span>
         <p class="mt-2 mb-3"><b>Day 1</b></p>
         <h6>Group Stage</h6>
         <div class="overflow-x-auto">
-          <table class="min-w-full bg-white border border-gray-200 rounded-lg">
+          <table class="min-w-full bg-transparent border rounded-lg">
             <thead>
-              <tr class="bg-gray-100">
-                <th class="px-4 py-2 text-left text-gray-600 font-semibold">
+              <tr class="bg-white text-white border-b">
+                <th
+                  class="border text-gray-600 px-4 py-2 text-left font-semibold"
+                >
                   Time
                 </th>
-                <th class="px-4 py-2 text-left text-gray-600 font-semibold">
+                <th
+                  class="border text-gray-600 px-4 py-2 text-left font-semibold"
+                >
                   Field 1
                 </th>
-                <th class="px-4 py-2 text-left text-gray-600 font-semibold">
+                <th
+                  class="border text-gray-600 px-4 py-2 text-left font-semibold"
+                >
                   Field 2
                 </th>
               </tr>
             </thead>
-            <tbody>
+            <tbody class="text-white">
               <tr
                 *ngFor="let fixture of fixtures"
-                class="border-b border-gray-200"
+                class="border-b border border-gray-200"
               >
-                <td class="px-4 py-2" data-label="Time">{{ fixture.time }}</td>
-                <td class="px-4 py-2" data-label="Field 1">
+                <td class="border px-4 py-2" data-label="Time">
+                  {{ fixture.time }}
+                </td>
+                <td class="border px-4 py-2" data-label="Field 1">
                   {{ fixture.field1 }}
                 </td>
-                <td class="px-4 py-2" data-label="Field 2">
+                <td class="border px-4 py-2" data-label="Field 2">
                   {{ fixture.field2 }}
                 </td>
               </tr>
@@ -299,16 +346,22 @@
         </div>
         <h6 class="pt-3">QuaterFinal</h6>
         <div class="overflow-x-auto">
-          <table class="min-w-full bg-white border border-gray-200 rounded-lg">
+          <table class="min-w-full bg-transparent border rounded-lg">
             <thead>
-              <tr class="bg-gray-100">
-                <th class="px-4 py-2 text-left text-gray-600 font-semibold">
+              <tr class="bg-white border-b">
+                <th
+                  class="border text-gray-600 px-4 py-2 text-left font-semibold"
+                >
                   Time
                 </th>
-                <th class="px-4 py-2 text-left text-gray-600 font-semibold">
+                <th
+                  class="border text-gray-600 px-4 py-2 text-left font-semibold"
+                >
                   Field 1
                 </th>
-                <th class="px-4 py-2 text-left text-gray-600 font-semibold">
+                <th
+                  class="border text-gray-600 px-4 py-2 text-left font-semibold"
+                >
                   Field 2
                 </th>
               </tr>
@@ -318,30 +371,38 @@
                 *ngFor="let fixture of fixtures2"
                 class="border-b border-gray-200"
               >
-                <td class="px-4 py-2" data-label="Time">{{ fixture.time }}</td>
-                <td class="px-4 py-2" data-label="Field 1">
+                <td class="border px-4 py-2" data-label="Time">
+                  {{ fixture.time }}
+                </td>
+                <td class="border px-4 py-2" data-label="Field 1">
                   {{ fixture.field1 }}
                 </td>
-                <td class="px-4 py-2" data-label="Field 2">
+                <td class="border px-4 py-2" data-label="Field 2">
                   {{ fixture.field2 }}
                 </td>
               </tr>
             </tbody>
           </table>
         </div>
-        <p class="mt-2 mb-3"><b>Day 2</b></p>
+        <p class="mt-2"><b>Day 2</b></p>
         <h6>SemiFinal</h6>
         <div class="overflow-x-auto">
-          <table class="min-w-full bg-white border border-gray-200 rounded-lg">
+          <table class="min-w-full bg-transparent border rounded-lg">
             <thead>
-              <tr class="bg-gray-100">
-                <th class="px-4 py-2 text-left text-gray-600 font-semibold">
+              <tr class="bg-white border-b">
+                <th
+                  class="border px-4 text-gray-600 py-2 text-left font-semibold"
+                >
                   Time
                 </th>
-                <th class="px-4 py-2 text-left text-gray-600 font-semibold">
+                <th
+                  class="border px-4 text-gray-600 py-2 text-left font-semibold"
+                >
                   Field 1
                 </th>
-                <th class="px-4 py-2 text-left text-gray-600 font-semibold">
+                <th
+                  class="border text-gray-600 px-4 py-2 text-left font-semibold"
+                >
                   Field 2
                 </th>
               </tr>
@@ -351,11 +412,13 @@
                 *ngFor="let fixture of fixtures3"
                 class="border-b border-gray-200"
               >
-                <td class="px-4 py-2" data-label="Time">{{ fixture.time }}</td>
-                <td class="px-4 py-2" data-label="Field 1">
+                <td class="border px-4 py-2" data-label="Time">
+                  {{ fixture.time }}
+                </td>
+                <td class="border px-4 py-2" data-label="Field 1">
                   {{ fixture.field1 }}
                 </td>
-                <td class="px-4 py-2" data-label="Field 2">
+                <td class="border px-4 py-2" data-label="Field 2">
                   {{ fixture.field2 }}
                 </td>
               </tr>
@@ -363,14 +426,20 @@
           </table>
         </div>
         <h6 class="pt-3">Final</h6>
-        <div class="overflow-x-auto">
-          <table class="min-w-full bg-white border border-gray-200 rounded-lg">
+        <div class="overflow-x-auto pb-2">
+          <table
+            class="min-w-full bg-transparent border border-gray-200 rounded-lg"
+          >
             <thead>
-              <tr class="bg-gray-100">
-                <th class="px-4 py-2 text-left text-gray-600 font-semibold">
+              <tr class="bg-gray-100 border-b">
+                <th
+                  class="border px-4 text-gray-600 py-2 text-left font-semibold"
+                >
                   Time
                 </th>
-                <th class="px-4 py-2 text-left text-gray-600 font-semibold">
+                <th
+                  class="border px-4 text-gray-600 py-2 text-left font-semibold"
+                >
                   Field 1
                 </th>
               </tr>
@@ -380,8 +449,10 @@
                 *ngFor="let fixture of fixtures4"
                 class="border-b border-gray-200"
               >
-                <td class="px-4 py-2" data-label="Time">{{ fixture.time }}</td>
-                <td class="px-4 py-2" data-label="Field 1">
+                <td class="border px-4 py-2" data-label="Time">
+                  {{ fixture.time }}
+                </td>
+                <td class="border px-4 py-2" data-label="Field 1">
                   {{ fixture.field1 }}
                 </td>
               </tr>
@@ -390,38 +461,31 @@
         </div>
       </div>
 
-      <div *ngIf="selectedTab === 'standings'" class="p-4">
-        <h2 class="text-3xl font-bold text-center pt-4 pb-2 text-gray-800 mb-4">
-          Standings
-        </h2>
+      <div
+        *ngIf="selectedTab === 'standings'"
+        class="mt-3 bg-sky-600 text-white px-2 pb-2"
+      >
+        <h2 class="text-3xl font-bold text-center pt-4 pb-2 mb-4">Standings</h2>
         <div *ngFor="let group of standingsGroups" class="mb-6">
           <table
-            class="standings-table w-full border border-gray-300 rounded-lg overflow-hidden"
+            class="min-w-full bg-transparent border rounded-lg text-center pb-2"
           >
-            <thead>
-              <tr class="bg-gray-100">
-                <th class="border border-gray-300 text-lg text-gray-800">GP</th>
-                <th
-                  class="border border-gray-300 px-4 py-2 text-lg text-gray-800"
-                >
-                  Team
-                </th>
-                <th
-                  class="border border-gray-300 px-4 py-2 text-lg text-gray-800"
-                >
-                  P
-                </th>
+            <thead class="px-2 bg-gray-100">
+              <tr class="bg-transparent text-white border-b">
+                <th class="border text-gray-600">GP</th>
+                <th class="border text-gray-600 px-4 py-2">Team</th>
+                <th class="border text-gray-600 px-4 py-2">P</th>
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let team of group" class="border-b border-gray-300">
-                <td class="text-gray-600" data-label="Played">
+              <tr *ngFor="let team of group" class="border border-gray-300">
+                <td class="border" data-label="Played">
                   {{ team?.played }}
                 </td>
-                <td class="px-4 py-2 text-gray-600" data-label="Team">
+                <td class="border px-4 py-2" data-label="Team">
                   {{ team?.name }}
                 </td>
-                <td class="px-4 py-2 text-gray-600" data-label="Points">
+                <td class="border px-4 py-2" data-label="Points">
                   {{ team?.points }}
                 </td>
               </tr>
@@ -430,33 +494,26 @@
         </div>
       </div>
 
-      <div *ngIf="selectedTab === 'results'" class="p-4">
-        <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">
-          Results
-        </h2>
+      <div
+        *ngIf="selectedTab === 'results'"
+        class="mt-3 bg-sky-600 text-white px-2 pb-2"
+      >
+        <h2 class="text-3xl font-bold text-center pt-3 mb-4">Results</h2>
         <table
-          class="results-table w-full border border-gray-300 rounded-lg overflow-hidden"
+          class="results-table min-w-full bg-transparent border rounded-lg text-center pb-2"
         >
           <thead>
             <tr class="bg-gray-100">
-              <th
-                class="border border-gray-300 px-4 py-2 text-lg text-gray-800"
-              >
-                Fixtures
-              </th>
-              <th
-                class="border border-gray-300 px-4 py-2 text-lg text-gray-800"
-              >
-                Results
-              </th>
+              <th class="border px-4 py-2 text-gray-600 text-lg">Fixtures</th>
+              <th class="border px-4 py-2 text-gray-600 text-lg">Results</th>
             </tr>
           </thead>
           <tbody>
             <tr *ngFor="let team of results" class="border-b border-gray-300">
-              <td class="px-4 py-2 text-gray-600" data-label="Fixture">
+              <td class="border px-4 py-2" data-label="Fixture">
                 {{ team.fixture }}
               </td>
-              <td class="px-4 py-2 text-gray-600" data-label="Result">
+              <td class="border px-4 py-2" data-label="Result">
                 {{ team.result }}
               </td>
             </tr>
@@ -466,32 +523,77 @@
     </div>
 
     <div *ngIf="selectedMainTab === '35+'">
-      <div class="py-8 px-4 pb-4 bg-gray-100">
-        <h2 class="text-3xl font-bold text-center text-gray-800">
-          35+ Registered Team
-        </h2>
-        <ul class="mt-4 list-disc list-inside space-y-2 text-lg text-gray-600">
-          <li>LA Gurans</li>
+      <div class="py-8 px-4 pb-4 bg-sky-600">
+        <button
+          (click)="toggleSection('teams35Roster')"
+          class="flex items-center justify-between w-full px-4 py-3 text-lg font-semibold text-white bg-sky-600 transition-all duration-300 hover:bg-sky-600"
+        >
+          <h2 class="text-3xl font-bold text-center px-2">
+            35+ Registered Team
+          </h2>
+          <span
+            class="inline-block transition-transform transform"
+            [class.-rotate-180]="show35Teams"
+          >
+            ▼
+          </span>
+        </button>
+        <ul
+          *ngIf="show35Teams"
+          class="grid grid-cols-1 gap-4 mt-4 text-lg text-white"
+        >
+          <li
+            *ngFor="let team of teams35; let i = index"
+            class="flex flex-col p-4 rounded-lg shadow-md bg-white text-black"
+          >
+            <div class="flex items-center justify-between">
+              <span>{{ team.name }}</span>
+              <button
+                (click)="toggle35Roster(i)"
+                class="w-6 h-6 text-white bg-sky-600 border border-sky-600 rounded-full hover:bg-sky-600 focus:ring-2 focus:ring-sky-600"
+              >
+                <span
+                  class="transform transition-transform"
+                  [class.rotate-45]="showRoster35Index === i"
+                >
+                  +
+                </span>
+              </button>
+            </div>
+            <ul
+              *ngIf="showRoster35Index === i"
+              class="mt-2 pl-5 list-disc list-inside space-y-2 text-gray-500"
+            >
+              <li *ngFor="let player of team.roster">{{ player }}</li>
+            </ul>
+          </li>
         </ul>
       </div>
-      <div *ngIf="selectedTab === 'fixtures'">
-        <h2 class="text-3xl pt-4 font-bold text-center text-gray-800">
-          35+ Fixtures
-        </h2>
+      <div
+        *ngIf="selectedTab === 'fixtures'"
+        class="mt-3 bg-sky-600 text-white px-2 pb-2"
+      >
+        <h2 class="text-3xl pt-4 font-bold text-center">35+ Fixtures</h2>
         <span>**Subject to Change**</span>
         <p class="mt-2 mb-3"><b>Day 1</b></p>
         <h6>Group Stage</h6>
         <div class="overflow-x-auto">
-          <table class="min-w-full bg-white border border-gray-200 rounded-lg">
+          <table class="min-w-full border border-gray-200 rounded-lg">
             <thead>
               <tr class="bg-gray-100">
-                <th class="px-4 py-2 text-left text-gray-600 font-semibold">
+                <th
+                  class="border px-4 py-2 text-left text-gray-600 font-semibold"
+                >
                   Time
                 </th>
-                <th class="px-4 py-2 text-left text-gray-600 font-semibold">
+                <th
+                  class="border px-4 py-2 text-left text-gray-600 font-semibold"
+                >
                   Field 1
                 </th>
-                <th class="px-4 py-2 text-left text-gray-600 font-semibold">
+                <th
+                  class="border px-4 py-2 text-left text-gray-600 font-semibold"
+                >
                   Field 2
                 </th>
               </tr>
@@ -501,8 +603,10 @@
                 *ngFor="let fixture of fixtures35"
                 class="border-b border-gray-200"
               >
-                <td class="px-4 py-2" data-label="Time">{{ fixture.time }}</td>
-                <td class="px-4 py-2" data-label="Field 1">
+                <td class="border px-4 py-2" data-label="Time">
+                  {{ fixture.time }}
+                </td>
+                <td class="border px-4 py-2" data-label="Field 1">
                   {{ fixture.field1 }}
                 </td>
                 <td class="px-4 py-2" data-label="Field 2">
@@ -515,16 +619,24 @@
         <p class="mt-2 mb-3"><b>Day 2</b></p>
         <h6>SemiFinal</h6>
         <div class="overflow-x-auto">
-          <table class="min-w-full bg-white border border-gray-200 rounded-lg">
+          <table
+            class="min-w-full bg-transparent border border-gray-200 rounded-lg"
+          >
             <thead>
               <tr class="bg-gray-100">
-                <th class="px-4 py-2 text-left text-gray-600 font-semibold">
+                <th
+                  class="border px-4 py-2 text-left text-gray-600 font-semibold"
+                >
                   Time
                 </th>
-                <th class="px-4 py-2 text-left text-gray-600 font-semibold">
+                <th
+                  class="border px-4 py-2 text-left text-gray-600 font-semibold"
+                >
                   Field 1
                 </th>
-                <th class="px-4 py-2 text-left text-gray-600 font-semibold">
+                <th
+                  class="border px-4 py-2 text-left text-gray-600 font-semibold"
+                >
                   Field 2
                 </th>
               </tr>
@@ -534,11 +646,13 @@
                 *ngFor="let fixture of fixtures235"
                 class="border-b border-gray-200"
               >
-                <td class="px-4 py-2" data-label="Time">{{ fixture.time }}</td>
-                <td class="px-4 py-2" data-label="Field 1">
+                <td class="border px-4 py-2" data-label="Time">
+                  {{ fixture.time }}
+                </td>
+                <td class="border px-4 py-2" data-label="Field 1">
                   {{ fixture.field1 }}
                 </td>
-                <td class="px-4 py-2" data-label="Field 2">
+                <td class="border px-4 py-2" data-label="Field 2">
                   {{ fixture.field2 }}
                 </td>
               </tr>
@@ -547,13 +661,19 @@
         </div>
         <h6 class="pt-3">Final</h6>
         <div class="overflow-x-auto">
-          <table class="min-w-full bg-white border border-gray-200 rounded-lg">
+          <table
+            class="min-w-full bg-transparent border border-gray-200 rounded-lg"
+          >
             <thead>
               <tr class="bg-gray-100">
-                <th class="px-4 py-2 text-left text-gray-600 font-semibold">
+                <th
+                  class="border px-4 py-2 text-left text-gray-600 font-semibold"
+                >
                   Time
                 </th>
-                <th class="px-4 py-2 text-left text-gray-600 font-semibold">
+                <th
+                  class="border px-4 py-2 text-left text-gray-600 font-semibold"
+                >
                   Field 1
                 </th>
               </tr>
@@ -563,8 +683,10 @@
                 *ngFor="let fixture of fixtures335"
                 class="border-b border-gray-200"
               >
-                <td class="px-4 py-2" data-label="Time">{{ fixture.time }}</td>
-                <td class="px-4 py-2" data-label="Field 1">
+                <td class="border px-4 py-2" data-label="Time">
+                  {{ fixture.time }}
+                </td>
+                <td class="border px-4 py-2" data-label="Field 1">
                   {{ fixture.field1 }}
                 </td>
               </tr>
@@ -572,38 +694,35 @@
           </table>
         </div>
       </div>
-      <div *ngIf="selectedTab === 'standings'">
-        <h2 class="text-3xl font-bold text-center pt-4 text-gray-800">
-          35+ Standings
-        </h2>
+      <div
+        *ngIf="selectedTab === 'standings'"
+        class="mt-3 bg-sky-600 text-white px-2 pb-2"
+      >
+        <h2 class="text-3xl font-bold text-center pt-4">35+ Standings</h2>
         <div *ngFor="let group of standingsGroups35" class="mb-6">
           <table
-            class="standings-table w-full border border-gray-300 rounded-lg overflow-hidden"
+            class="standings-table min-w-full border text-center border-gray-200 rounded-lg"
           >
             <thead>
               <tr class="bg-gray-100">
-                <th class="border border-gray-300 text-lg text-gray-800">GP</th>
-                <th
-                  class="border border-gray-300 px-4 py-2 text-lg text-gray-800"
-                >
+                <th class="border border-gray-300 text-gray-600">GP</th>
+                <th class="border border-gray-300 px-4 py-2 text-gray-600">
                   Team
                 </th>
-                <th
-                  class="border border-gray-300 px-4 py-2 text-lg text-gray-800"
-                >
+                <th class="border border-gray-300 px-4 py-2 text-gray-600">
                   P
                 </th>
               </tr>
             </thead>
             <tbody>
               <tr *ngFor="let team of group" class="border-b border-gray-300">
-                <td class="text-gray-600" data-label="Played">
+                <td class="border" data-label="Played">
                   {{ team?.played }}
                 </td>
-                <td class="px-4 py-2 text-gray-600" data-label="Team">
+                <td class="px-4 py-2 border" data-label="Team">
                   {{ team?.name }}
                 </td>
-                <td class="px-4 py-2 text-gray-600" data-label="Points">
+                <td class="px-4 py-2 border" data-label="Points">
                   {{ team?.points }}
                 </td>
               </tr>
@@ -611,33 +730,30 @@
           </table>
         </div>
       </div>
-      <div *ngIf="selectedTab === 'results'">
-        <h2 class="text-3xl font-bold text-center text-gray-800">
-          35+ Results
-        </h2>
+      <div
+        *ngIf="selectedTab === 'results'"
+        class="mt-3 bg-sky-600 text-white px-2 pb-2"
+      >
+        <h2 class="text-3xl font-bold text-center pt-4">35+ Results</h2>
         <table
-          class="results-table w-full border border-gray-300 rounded-lg overflow-hidden"
+          class="results-table min-w-full border border-gray-200 rounded-lg"
         >
           <thead>
             <tr class="bg-gray-100">
-              <th
-                class="border border-gray-300 px-4 py-2 text-lg text-gray-800"
-              >
+              <th class="border border-gray-300 px-4 py-2 text-gray-800">
                 Fixtures
               </th>
-              <th
-                class="border border-gray-300 px-4 py-2 text-lg text-gray-800"
-              >
+              <th class="border border-gray-300 px-4 py-2 text-gray-800">
                 Results
               </th>
             </tr>
           </thead>
           <tbody>
             <tr *ngFor="let team of results35" class="border-b border-gray-300">
-              <td class="px-4 py-2 text-gray-600" data-label="Fixture">
+              <td class="border px-4 py-2" data-label="Fixture">
                 {{ team.fixture }}
               </td>
-              <td class="px-4 py-2 text-gray-600" data-label="Result">
+              <td class="border px-4 py-2" data-label="Result">
                 {{ team.result }}
               </td>
             </tr>

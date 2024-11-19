@@ -43,6 +43,22 @@
   color: #007bff;
 }
 
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+button span {
+  display: block;
+  line-height: 1;
+}
+
+button .rotate-45 {
+  transform: rotate(45deg);
+}
+
 @media (max-width: 640px) {
   .fixtures-table thead {
     display: none;

@@ -23,38 +23,38 @@ export class TournamentComponent {
   }
   standingsGroups = [
     [
-      { name: 'Team A (1)', points: 6, played: 3 },
-      { name: 'Team B (2)', points: 3, played: 3 },
-      { name: 'Team C (3)', points: 0, played: 3 },
+      { name: 'Team A (1)', points: 0, played: 0 },
+      { name: 'Team B (2)', points: 0, played: 0 },
+      { name: 'Team C (3)', points: 0, played: 0 },
     ],
     [
-      { name: 'Team D (4)', points: 6, played: 3 },
-      { name: 'Team E (5)', points: 3, played: 3 },
-      { name: 'Team F (6)', points: 0, played: 3 },
+      { name: 'Team D (4)', points: 0, played: 0 },
+      { name: 'Team E (5)', points: 0, played: 0 },
+      { name: 'Team F (6)', points: 0, played: 0 },
     ],
     [
-      { name: 'Team G (7)', points: 6, played: 3 },
-      { name: 'Team H (8)', points: 3, played: 3 },
-      { name: 'Team I (9)', points: 0, played: 3 },
+      { name: 'Team G (7)', points: 0, played: 0 },
+      { name: 'Team H (8)', points: 0, played: 0 },
+      { name: 'Team I (9)', points: 0, played: 0 },
     ],
     [
-      { name: 'Team J (10)', points: 6, played: 3 },
-      { name: 'Team K (11)', points: 3, played: 3 },
-      { name: 'Team L (12)', points: 0, played: 3 },
+      { name: 'Team J (10)', points: 0, played: 0 },
+      { name: 'Team K (11)', points: 0, played: 0 },
+      { name: 'Team L (12)', points: 0, played: 0 },
     ],
   ];
   standingsGroups35 = [
     [
-      { name: 'Team A (1)', points: 9, played: 3 },
-      { name: 'Team B (2)', points: 6, played: 3 },
-      { name: 'Team C (3)', points: 3, played: 3 },
-      { name: 'Team D (4)', points: 0, played: 3 },
+      { name: 'Team A (1)', points: 0, played: 0 },
+      { name: 'Team B (2)', points: 0, played: 0 },
+      { name: 'Team C (3)', points: 0, played: 0 },
+      { name: 'Team D (4)', points: 0, played: 0 },
     ],
     [
-      { name: 'Team E (5)', points: 9, played: 3 },
-      { name: 'Team F (6)', points: 6, played: 3 },
-      { name: 'Team G (7)', points: 3, played: 3 },
-      { name: 'Team H (8)', points: 0, played: 3 },
+      { name: 'Team E (5)', points: 0, played: 0 },
+      { name: 'Team F (6)', points: 0, played: 0 },
+      { name: 'Team G (7)', points: 0, played: 0 },
+      { name: 'Team H (8)', points: 0, played: 0 },
     ],
   ];
 
@@ -212,6 +212,8 @@ export class TournamentComponent {
   showGoalScoringRules = false;
   showTieBreakerRules = false;
   showTournamentRules = false;
+  showTeams = false;
+  show35Teams = false;
 
   toggleSection(section: string): void {
     switch (section) {
@@ -230,8 +232,54 @@ export class TournamentComponent {
       case 'tournamentRules':
         this.showTournamentRules = !this.showTournamentRules;
         break;
+      case 'teamsRoster':
+        this.showTeams = !this.showTeams;
+        break;
+      case 'teams35Roster':
+        this.show35Teams = !this.show35Teams;
+        break;
       default:
         break;
     }
+  }
+
+  teamsRegular = [
+    { name: 'LA Gurans', roster: ['Player 1', 'Player 2', 'Player 3'] },
+    { name: 'Team 2', roster: ['Player A', 'Player B', 'Player C'] },
+    { name: 'Team 3', roster: ['Player X', 'Player Y', 'Player Z'] },
+    { name: 'Team 4', roster: ['Player L', 'Player M', 'Player N'] },
+    { name: 'Team 5', roster: ['Player A', 'Player B', 'Player C'] },
+    { name: 'Team 6', roster: ['Player X', 'Player Y', 'Player Z'] },
+    { name: 'Team 7', roster: ['Player L', 'Player M', 'Player N'] },
+    { name: 'Team 8', roster: ['Player A', 'Player B', 'Player C'] },
+    { name: 'Team 9', roster: ['Player X', 'Player Y', 'Player Z'] },
+    { name: 'Team 10', roster: ['Player L', 'Player M', 'Player N'] },
+    { name: 'Team 11', roster: ['Player X', 'Player Y', 'Player Z'] },
+    { name: 'Team 12', roster: ['Player L', 'Player M', 'Player N'] },
+  ];
+
+  showRosterIndex: number | null = null;
+
+  // Toggle the roster visibility
+  toggleRoster(index: number) {
+    this.showRosterIndex = this.showRosterIndex === index ? null : index;
+  }
+
+  teams35 = [
+    { name: 'LA Gurans', roster: ['Player 1', 'Player 2', 'Player 3'] },
+    { name: 'Team 2', roster: ['Player A', 'Player B', 'Player C'] },
+    { name: 'Team 3', roster: ['Player X', 'Player Y', 'Player Z'] },
+    { name: 'Team 4', roster: ['Player L', 'Player M', 'Player N'] },
+    { name: 'Team 5', roster: ['Player A', 'Player B', 'Player C'] },
+    { name: 'Team 6', roster: ['Player X', 'Player Y', 'Player Z'] },
+    { name: 'Team 7', roster: ['Player L', 'Player M', 'Player N'] },
+    { name: 'Team 8', roster: ['Player A', 'Player B', 'Player C'] },
+  ];
+
+  showRoster35Index: number | null = null;
+
+  // Toggle the roster visibility
+  toggle35Roster(index: number) {
+    this.showRoster35Index = this.showRoster35Index === index ? null : index;
   }
 }
