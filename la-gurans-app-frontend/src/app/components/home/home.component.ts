@@ -14,7 +14,7 @@ export class HomeComponent {
     { name: 'Amit Gurung', position: 'Member' },
     { name: 'Prajwol Shakya', position: 'Member' },
     { name: 'Samarpan Prasai', position: 'Member' },
-    { name: 'Ronal Dhungel', position: 'Member' },
+    { name: 'Sohan Thapa', position: 'Member' },
   ];
   scrollToTop(): void {
     window.scrollTo({ top: 0, behavior: 'smooth' });

@@ -19,41 +19,7 @@
   <div class="py-8 px-4 bg-gray-100">
     <div class="rules-container">
       <h2 class="title">Rules and Regulations</h2>
-      <p class="subtitle">**Subject to Change**</p>
-
-      <div>
-        <button
-          (click)="toggleSection('generalRules')"
-          class="flex items-center justify-between w-full px-4 py-3 text-lg font-semibold text-white bg-sky-600 border rounded-lg transition-all duration-300 hover:bg-sky-600"
-        >
-          <span class="px-2">General Rules</span>
-          <span
-            class="inline-block transition-transform transform"
-            [class.-rotate-180]="showGeneralRules"
-          >
-            ▼
-          </span>
-        </button>
-        <div
-          *ngIf="showGeneralRules"
-          class="mt-4 p-4 text-gray-700 bg-gray-50 border border-gray-200 rounded-lg mb-3"
-        >
-          <ul
-            class="list-disc list-inside space-y-2 pl-5 text-gray-700 text-base"
-          >
-            <li>
-              All players must wear shin guards or will not be allowed to play.
-            </li>
-            <li>All players must wear jerseys/shirts during play.</li>
-            <li>
-              Players wearing protective casts must receive written approval by
-              the Tournament director.
-            </li>
-            <li>No jewelry allowed except medical bracelets.</li>
-          </ul>
-        </div>
-      </div>
-
+      <!-- <p class="subtitle">**Subject to Change**</p> -->
       <div>
         <button
           (click)="toggleSection('tournamentRules')"
@@ -71,123 +37,179 @@
           *ngIf="showTournamentRules"
           class="mt-4 p-4 text-gray-700 bg-gray-50 border border-gray-200 rounded-lg mb-3"
         >
+          <h6>Player Registration:</h6>
           <ul
             class="list-disc list-inside space-y-2 pl-5 text-gray-700 text-base"
           >
-            <li>Duration of the game - 20 minute halves for all game.</li>
-            <li>Substitutions can be made on the fly.</li>
-            <li>Unlimited substitutions allowed.</li>
             <li>
-              Balls crossing the touch-line on the ground or in the air will be
-              put in play via kick-in. Defending players must provide a 5 yard
-              distance from the point of occurrence.
-            </li>
-            <li>No slide tackling.</li>
-            <li>
-              Free Kicks- defending players may set up a wall 7 yards from the
-              point of infraction.
-            </li>
-            <li>
-              <strong>Referees</strong>- There will be no abuse of the referees
-              tolerate, verbal or otherwise. Any indication of such behavior by
-              a coach or parent will result in immediate removal from the
-              tournament site. No verbal abuse of any player, coach or referee
-              will be tolerated.
+              Every Individual player must show a government issued ID for
+              verification and sign a waiver form on the day or before the
+              tournament.
             </li>
           </ul>
-        </div>
-      </div>
-
-      <div>
-        <button
-          (click)="toggleSection('kickOffRules')"
-          class="flex items-center justify-between w-full px-4 py-3 text-lg font-semibold text-white bg-sky-600 border rounded-lg transition-all duration-300 hover:bg-sky-600"
-        >
-          <span class="px-2">Kick Off / Kick Ins Rules</span>
-          <span
-            class="inline-block transition-transform transform"
-            [class.-rotate-180]="showKickOffRules"
-          >
-            ▼
-          </span>
-        </button>
-        <div
-          *ngIf="showKickOffRules"
-          class="mt-4 p-4 text-gray-700 bg-gray-50 border border-gray-200 rounded-lg mb-3"
-        >
+          <h6>No Outside Food or Alcohol:</h6>
           <ul
             class="list-disc list-inside space-y-2 pl-5 text-gray-700 text-base"
           >
-            <li>Kick-offs may be kicked in any direction.</li>
-            <li>Goals can be scored from anywhere on the field.</li>
+            <li>Strictly prohibited inside the complex.</li>
             <li>
-              Ball crossing the sideline will be put in play via kick-in.
-              Defending players must maintain a 5-yard distance.
+              Teams are responsible for disposing of trash in designated areas.
             </li>
           </ul>
-        </div>
-      </div>
-
-      <div>
-        <button
-          (click)="toggleSection('goalScoringRules')"
-          class="flex items-center justify-between w-full px-4 py-3 text-lg font-semibold text-white bg-sky-600 border rounded-lg transition-all duration-300 hover:bg-sky-600"
-        >
-          <span class="px-2">Goal Scoring Rules</span>
-          <span
-            class="inline-block transition-transform transform"
-            [class.-rotate-180]="showGoalScoringRules"
-          >
-            ▼
-          </span>
-        </button>
-        <div
-          *ngIf="showGoalScoringRules"
-          class="mt-4 p-4 text-gray-700 bg-gray-50 border border-gray-200 rounded-lg mb-3"
-        >
+          <h6>Game Format:</h6>
           <ul
             class="list-disc list-inside space-y-2 pl-5 text-gray-700 text-base"
           >
-            <li>Goals can be scored from any point on the field.</li>
+            <li>First round follows a points-based league format.</li>
             <li>
-              Hand balls result in penalty kicks at the referee's discretion.
+              League and quarter-final games: 20 min per half. Semi-finals and
+              finals: 25 min per half. Tied points/goal difference will be
+              settled by 5 min extra time in Quarter Finals, Semi Finals and
+              Finals.
             </li>
+            <li>Teams more than 10 minutes late will forfeit (2-0 score).</li>
           </ul>
-        </div>
-      </div>
-      <div>
-        <button
-          (click)="toggleSection('tiebreakerRules')"
-          class="flex items-center justify-between w-full px-4 py-3 text-lg font-semibold text-white bg-sky-600 border rounded-lg transition-all duration-300 hover:bg-sky-600"
-        >
-          <span class="px-2">Tie Breaker Rules</span>
-          <span
-            class="inline-block transition-transform transform"
-            [class.-rotate-180]="showTieBreakerRules"
-          >
-            ▼
-          </span>
-        </button>
-        <div
-          *ngIf="showTieBreakerRules"
-          class="mt-4 p-4 text-gray-700 bg-gray-50 border border-gray-200 rounded-lg mb-3"
-        >
-          <p>The following tiebreakers will decide who the winner is:</p>
+          <h6>Team Setup:</h6>
           <ul
             class="list-disc list-inside space-y-2 pl-5 text-gray-700 text-base"
           >
-            <li>Points</li>
-            <li>Head-to-head</li>
-            <li>Goal Differential</li>
-            <li>Goals against</li>
-            <li>Goal scored</li>
-            <li>Shoot-out</li>
             <li>
-              When there are 3 teams with the same amount of points (3-way tie)
-              the goal differential, goals scored or goals against will decide
-              who wins.
+              Regular bracket: 12 players. Seven on-field, unlimited
+              substitutions.
+            </li>
+            <li>
+              35+ bracket: 12 players. Seven on-field, unlimited substitutions.
             </li>
           </ul>
+          <h6>Player IDs:</h6>
+          <ul
+            class="list-disc list-inside space-y-2 pl-5 text-gray-700 text-base"
+          >
+            <li>
+              All players must be on the roster to play. For the 35+ category,
+              government-issued ID and a physical passport are required for
+              secondary verification if asked by the organizers.
+            </li>
+          </ul>
+          <h6>Equipment:</h6>
+          <ul
+            class="list-disc list-inside space-y-2 pl-5 text-gray-700 text-base"
+          >
+            <li>
+              Full team uniforms, proper footwear, and shin guards are
+              mandatory. No jewelry or metal-studded cleats. The team that
+              registered first chooses their jersey if there is a color clash.
+              Pennies will be provided by the organizers if no team has a
+              secondary Jersey.
+            </li>
+          </ul>
+          <h6>Eligibility:</h6>
+          <ul
+            class="list-disc list-inside space-y-2 pl-5 text-gray-700 text-base"
+          >
+            <li>
+              No foreign players allowed. If questioned, the respective player’s
+              community verification is required.
+            </li>
+            <li>
+              One player can only play for one team under the same category.
+            </li>
+            <li>
+              For the 35+ category, as long as the BIRTH YEAR is 1990 or before,
+              you are eligible to play.
+            </li>
+          </ul>
+          <h6>Punctuality:</h6>
+          <ul
+            class="list-disc list-inside space-y-2 pl-5 text-gray-700 text-base"
+          >
+            <li>Teams must arrive 30 minutes early.</li>
+          </ul>
+          <h6>Conduct:</h6>
+          <ul
+            class="list-disc list-inside space-y-2 pl-5 text-gray-700 text-base"
+          >
+            <li>
+              Officials’ decisions are final. Fights, fake IDs, or inappropriate
+              behavior will lead to disqualification. No vulgar language
+              allowed.
+            </li>
+          </ul>
+          <h6>Direct and Indirect Kicks:</h6>
+          <ul
+            class="list-disc list-inside space-y-2 pl-5 text-gray-700 text-base"
+          >
+            <li>
+              When the ball goes out of play along the sidelines, the game is
+              restarted with a kick-in, not a throw-in.
+            </li>
+            <li>
+              A goal can be scored directly from any kick off except Goal Kick.
+            </li>
+          </ul>
+          <h6>Goalkeeper Restrictions:</h6>
+          <ul
+            class="list-disc list-inside space-y-2 pl-5 text-gray-700 text-base"
+          >
+            <li>
+              A direct goal from the goalkeeper is not allowed meaning the ball
+              must touch another player first.
+            </li>
+          </ul>
+          <h6>Tackling:</h6>
+          <ul
+            class="list-disc list-inside space-y-2 pl-5 text-gray-700 text-base"
+          >
+            <li>
+              Any physical challenges will be deemed a foul, and the referee
+              will penalize accordingly.
+            </li>
+            <li>
+              Slide tackling is only permitted to reach a cross or to keep a
+              ball in play.
+            </li>
+          </ul>
+          <h6>Substitutes:</h6>
+          <ul
+            class="list-disc list-inside space-y-2 pl-5 text-gray-700 text-base"
+          >
+            <li>
+              Unlimited substitutions are allowed as long as the referee is made
+              aware of the changes.
+            </li>
+            <li>
+              Substitutes must enter and leave the field of play at the referees
+              discretion.
+            </li>
+          </ul>
+          <h6>Referee Decisions:</h6>
+          <ul
+            class="list-disc list-inside space-y-2 pl-5 text-gray-700 text-base"
+          >
+            <li>
+              The referee’s decision is FINAL on all matters during the game,
+              including fouls, cards, and other in-game situations.
+            </li>
+          </ul>
+          <h6>FIFA Regulations:</h6>
+          <ul
+            class="list-disc list-inside space-y-2 pl-5 text-gray-700 text-base"
+          >
+            <li>For all other rules the laws of FIFA will apply.</li>
+          </ul>
+          <h6>Final Decisions:</h6>
+          <ul
+            class="list-disc list-inside space-y-2 pl-5 text-gray-700 text-base"
+          >
+            <li>
+              Organizers and management reserve the right to make necessary
+              changes.
+            </li>
+          </ul>
+          <h6>
+            Note : 2 player/s changes or modifications to the team roster will
+            be allowed after tie sheet draw and before January 16th, 2025.
+          </h6>
         </div>
       </div>
     </div>
