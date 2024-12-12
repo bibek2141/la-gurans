@@ -21,6 +21,14 @@ export class MembersComponent {
     { name: 'Saurav Leembu', position: 'Member' },
     { name: 'Kritiswa Aryal', position: 'Member' },
     { name: 'Surendra Gurung', position: 'Member' },
+    { name: 'Raju Aryal', position: 'Member' },
+    { name: 'Nabin Rimal', position: 'Member' },
+    { name: 'Bikesh KC', position: 'Member' },
+    { name: 'Manish Khadka', position: 'Member' },
+    { name: 'Suman Ghale', position: 'Member' },
+    { name: 'Tilak Purja', position: 'Member' },
+    { name: 'Pardip Niraula', position: 'Member' },
+    { name: 'Asish Pradhan', position: 'Member' },
   ];
 }
 
