@@ -29,6 +29,8 @@ export class MembersComponent {
     { name: 'Tilak Purja', position: 'Member' },
     { name: 'Pardip Niraula', position: 'Member' },
     { name: 'Asish Pradhan', position: 'Member' },
+    { name: 'Rojil Niraula', position: 'Member' },
+    { name: 'Ronal Dhungel', position: 'Member' },
   ];
 }
 
