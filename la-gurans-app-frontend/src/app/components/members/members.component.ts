@@ -31,6 +31,8 @@ export class MembersComponent {
     { name: 'Asish Pradhan', position: 'Member' },
     { name: 'Rojil Niraula', position: 'Member' },
     { name: 'Ronal Dhungel', position: 'Member' },
+    { name: 'Shlok Wagle', position: 'Member' },
+    { name: 'Nikol Shrestha', position: 'Member' },
   ];
 }
 
