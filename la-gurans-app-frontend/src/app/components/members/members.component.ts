@@ -37,6 +37,7 @@ export class MembersComponent {
     { name: 'Sandesh Parajuli', position: 'Member' },
     { name: 'Saksham Thapa', position: 'Member' },
     { name: 'Sohan khadka', position: 'Member' },
+    { name: 'Bikesh Shrestha', position: 'Member' },
   ];
 }
 
