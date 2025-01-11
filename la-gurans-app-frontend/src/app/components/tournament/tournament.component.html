@@ -336,7 +336,8 @@
         <h2 class="text-3xl font-bold text-center pt-4 text-white">Fixtures</h2>
         <span>**Subject to Change**</span>
         <p class="mt-2 mb-3"><b>Day 1</b></p>
-        <h6>Group Stage</h6>
+        <h4 class="pt-3">Group Stage</h4>
+        <h6>Game Duration: 50 minutes (25 min half + 5 min halftime)</h6>
         <div class="overflow-x-auto">
           <table class="min-w-full bg-transparent border rounded-lg">
             <thead>
@@ -376,7 +377,8 @@
             </tbody>
           </table>
         </div>
-        <h6 class="pt-3">QuaterFinal</h6>
+        <h4 class="pt-3">QuarterFinal</h4>
+        <h6>Game Duration: 50 minutes (25 min half + 5 min halftime)</h6>
         <div class="overflow-x-auto">
           <table class="min-w-full bg-transparent border rounded-lg">
             <thead>
@@ -394,7 +396,27 @@
                 <th
                   class="border text-gray-600 px-4 py-2 text-left font-semibold"
                 >
+                  Volunteer
+                </th>
+                <th
+                  class="border text-gray-600 px-4 py-2 text-left font-semibold"
+                >
+                  Refree
+                </th>
+                <th
+                  class="border text-gray-600 px-4 py-2 text-left font-semibold"
+                >
                   Field 2
+                </th>
+                <th
+                  class="border text-gray-600 px-4 py-2 text-left font-semibold"
+                >
+                  Volunteer
+                </th>
+                <th
+                  class="border text-gray-600 px-4 py-2 text-left font-semibold"
+                >
+                  Refree
                 </th>
               </tr>
             </thead>
@@ -409,15 +431,126 @@
                 <td class="border px-4 py-2" data-label="Field 1">
                   {{ fixture.field1 }}
                 </td>
+                <td class="border px-4 py-2" data-label="Field 2">Ref 1</td>
+                <td class="border px-4 py-2" data-label="Field 2">1 & 2</td>
                 <td class="border px-4 py-2" data-label="Field 2">
                   {{ fixture.field2 }}
                 </td>
+                <td class="border px-4 py-2" data-label="Field 2">Ref 2</td>
+                <td class="border px-4 py-2" data-label="Field 2">3 & 4</td>
               </tr>
             </tbody>
           </table>
         </div>
-        <p class="mt-2"><b>Day 2</b></p>
-        <h6>SemiFinal</h6>
+        <div class="overflow-x-auto pt-3">
+          <table class="min-w-full bg-transparent border rounded-lg">
+            <thead>
+              <tr class="bg-white border-b">
+                <th
+                  class="border text-gray-600 px-4 py-2 text-left font-semibold"
+                >
+                  Time
+                </th>
+                <th
+                  class="border text-gray-600 px-4 py-2 text-left font-semibold"
+                >
+                  Field 3
+                </th>
+                <th
+                  class="border text-gray-600 px-4 py-2 text-left font-semibold"
+                >
+                  Volunteer
+                </th>
+                <th
+                  class="border text-gray-600 px-4 py-2 text-left font-semibold"
+                >
+                  Refree
+                </th>
+                <th
+                  class="border text-gray-600 px-4 py-2 text-left font-semibold"
+                >
+                  Field 4
+                </th>
+                <th
+                  class="border text-gray-600 px-4 py-2 text-left font-semibold"
+                >
+                  Volunteer
+                </th>
+                <th
+                  class="border text-gray-600 px-4 py-2 text-left font-semibold"
+                >
+                  Refree
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr
+                *ngFor="let fixture of fixtures3"
+                class="border-b border-gray-200"
+              >
+                <td class="border px-4 py-2" data-label="Time">
+                  {{ fixture.time }}
+                </td>
+                <td class="border px-4 py-2" data-label="Field 1">
+                  {{ fixture.field1 }}
+                </td>
+                <td class="border px-4 py-2" data-label="Field 2">Ref 3</td>
+                <td class="border px-4 py-2" data-label="Field 2">5 & 6</td>
+                <td class="border px-4 py-2" data-label="Field 2">
+                  {{ fixture.field2 }}
+                </td>
+                <td class="border px-4 py-2" data-label="Field 2">Ref 4</td>
+                <td class="border px-4 py-2" data-label="Field 2">7 & 8</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="mt-2 pt-3"><b>Day 2</b></p>
+        <h4>SemiFinal</h4>
+        <h6>Game Duration: 60 minutes (30 min half + 5 min halftime)</h6>
+        <div class="overflow-x-auto pb-3">
+          <table class="min-w-full bg-transparent border rounded-lg">
+            <thead>
+              <tr class="bg-white border-b">
+                <th
+                  class="border px-4 text-gray-600 py-2 text-left font-semibold"
+                >
+                  Time
+                </th>
+                <th
+                  class="border px-4 text-gray-600 py-2 text-left font-semibold"
+                >
+                  Field 1
+                </th>
+                <th
+                  class="border text-gray-600 px-4 py-2 text-left font-semibold"
+                >
+                  Volunteer
+                </th>
+                <th
+                  class="border text-gray-600 px-4 py-2 text-left font-semibold"
+                >
+                  Refree
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr
+                *ngFor="let fixture of fixtures4"
+                class="border-b border-gray-200"
+              >
+                <td class="border px-4 py-2" data-label="Time">
+                  {{ fixture.time }}
+                </td>
+                <td class="border px-4 py-2" data-label="Field 1">
+                  {{ fixture.field1 }}
+                </td>
+                <td class="border px-4 py-2" data-label="Field 2">Ref 1</td>
+                <td class="border px-4 py-2" data-label="Field 2">1 & 2</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
         <div class="overflow-x-auto">
           <table class="min-w-full bg-transparent border rounded-lg">
             <thead>
@@ -435,13 +568,18 @@
                 <th
                   class="border text-gray-600 px-4 py-2 text-left font-semibold"
                 >
-                  Field 2
+                  Volunteer
+                </th>
+                <th
+                  class="border text-gray-600 px-4 py-2 text-left font-semibold"
+                >
+                  Refree
                 </th>
               </tr>
             </thead>
             <tbody>
               <tr
-                *ngFor="let fixture of fixtures3"
+                *ngFor="let fixture of fixtures5"
                 class="border-b border-gray-200"
               >
                 <td class="border px-4 py-2" data-label="Time">
@@ -450,14 +588,14 @@
                 <td class="border px-4 py-2" data-label="Field 1">
                   {{ fixture.field1 }}
                 </td>
-                <td class="border px-4 py-2" data-label="Field 2">
-                  {{ fixture.field2 }}
-                </td>
+                <td class="border px-4 py-2" data-label="Field 2">Ref 1</td>
+                <td class="border px-4 py-2" data-label="Field 2">1 & 2</td>
               </tr>
             </tbody>
           </table>
         </div>
-        <h6 class="pt-3">Final</h6>
+        <h4 class="pt-3">Final</h4>
+        <h6>Game Duration: 60 minutes (30 min half + 5 min halftime)</h6>
         <div class="overflow-x-auto pb-2">
           <table
             class="min-w-full bg-transparent border border-gray-200 rounded-lg"
@@ -474,11 +612,21 @@
                 >
                   Field 1
                 </th>
+                <th
+                  class="border px-4 py-2 text-left text-gray-600 font-semibold"
+                >
+                  Volunteer
+                </th>
+                <th
+                  class="border px-4 py-2 text-left text-gray-600 font-semibold"
+                >
+                  Referee
+                </th>
               </tr>
             </thead>
             <tbody>
               <tr
-                *ngFor="let fixture of fixtures4"
+                *ngFor="let fixture of fixtures6"
                 class="border-b border-gray-200"
               >
                 <td class="border px-4 py-2" data-label="Time">
@@ -487,6 +635,8 @@
                 <td class="border px-4 py-2" data-label="Field 1">
                   {{ fixture.field1 }}
                 </td>
+                <td class="border px-4 py-2" data-label="Field 1">Ref 1</td>
+                <td class="border px-4 py-2" data-label="Field 1">1 & 2</td>
               </tr>
             </tbody>
           </table>
@@ -606,7 +756,8 @@
         <h2 class="text-3xl pt-4 font-bold text-center">35+ Fixtures</h2>
         <span>**Subject to Change**</span>
         <p class="mt-2 mb-3"><b>Day 1</b></p>
-        <h6>Group Stage</h6>
+        <h4>Group Stage</h4>
+        <h6>Game Duration: 50 minutes (25 min half + 5 min halftime)</h6>
         <div class="overflow-x-auto">
           <table class="min-w-full border border-gray-200 rounded-lg">
             <thead>
@@ -619,12 +770,17 @@
                 <th
                   class="border px-4 py-2 text-left text-gray-600 font-semibold"
                 >
-                  Field 1
+                  Field 3
                 </th>
                 <th
                   class="border px-4 py-2 text-left text-gray-600 font-semibold"
                 >
-                  Field 2
+                  Volunteer
+                </th>
+                <th
+                  class="border px-4 py-2 text-left text-gray-600 font-semibold"
+                >
+                  Referee
                 </th>
               </tr>
             </thead>
@@ -637,17 +793,19 @@
                   {{ fixture.time }}
                 </td>
                 <td class="border px-4 py-2" data-label="Field 1">
-                  {{ fixture.field1 }}
+                  {{ fixture.field3 }}
                 </td>
-                <td class="px-4 py-2" data-label="Field 2">
-                  {{ fixture.field2 }}
-                </td>
+                <td class="border px-4 py-2">5 & 6</td>
+                <td class="border px-4 py-2">Ref 3</td>
               </tr>
             </tbody>
           </table>
         </div>
-        <p class="mt-2 mb-3"><b>Day 2</b></p>
-        <h6>SemiFinal</h6>
+        <p class="pt-3"><b>Day 2</b></p>
+        <h4 class="pt-3">Final</h4>
+        <h6 class="pt-3">
+          Game Duration: 60 minutes(30 min half + 5 min halftime)
+        </h6>
         <div class="overflow-x-auto">
           <table
             class="min-w-full bg-transparent border border-gray-200 rounded-lg"
@@ -667,7 +825,12 @@
                 <th
                   class="border px-4 py-2 text-left text-gray-600 font-semibold"
                 >
-                  Field 2
+                  Volunteer
+                </th>
+                <th
+                  class="border px-4 py-2 text-left text-gray-600 font-semibold"
+                >
+                  Referee
                 </th>
               </tr>
             </thead>
@@ -680,45 +843,10 @@
                   {{ fixture.time }}
                 </td>
                 <td class="border px-4 py-2" data-label="Field 1">
-                  {{ fixture.field1 }}
+                  {{ fixture.field3 }}
                 </td>
-                <td class="border px-4 py-2" data-label="Field 2">
-                  {{ fixture.field2 }}
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <h6 class="pt-3">Final</h6>
-        <div class="overflow-x-auto">
-          <table
-            class="min-w-full bg-transparent border border-gray-200 rounded-lg"
-          >
-            <thead>
-              <tr class="bg-gray-100">
-                <th
-                  class="border px-4 py-2 text-left text-gray-600 font-semibold"
-                >
-                  Time
-                </th>
-                <th
-                  class="border px-4 py-2 text-left text-gray-600 font-semibold"
-                >
-                  Field 1
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr
-                *ngFor="let fixture of fixtures335"
-                class="border-b border-gray-200"
-              >
-                <td class="border px-4 py-2" data-label="Time">
-                  {{ fixture.time }}
-                </td>
-                <td class="border px-4 py-2" data-label="Field 1">
-                  {{ fixture.field1 }}
-                </td>
+                <td class="border px-4 py-2">1 & 2</td>
+                <td class="border px-4 py-2">Ref 1</td>
               </tr>
             </tbody>
           </table>
