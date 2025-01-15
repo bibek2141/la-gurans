@@ -36,7 +36,6 @@ export class TournamentComponent {
       { name: 'Team G (7)', points: 0, played: 0 },
       { name: 'Team H (8)', points: 0, played: 0 },
       { name: 'Team I (9)', points: 0, played: 0 },
-      { name: 'Team J (10)', points: 0, played: 0 },
     ],
   ];
   standingsGroups35 = [
@@ -50,126 +49,103 @@ export class TournamentComponent {
 
   fixtures: Fixture[] = [
     {
-      time: '8:30 - 9:25',
+      time: '10:00 - 10:55',
       field1: 'A1 vs A2',
       field2: 'B4 vs B5',
-    },
-    {
-      time: '9:30 - 10:25',
-      field1: 'C7 vs C8',
-      field2: 'C9 vs C10',
-    },
-    {
-      time: '10:30 - 11:25',
-      field1: 'A1 vs A3',
-      field2: 'B4 vs B6',
+      field3: 'C7 vs C8',
     },
     {
       time: '12:00 - 12:55',
-      field1: 'C7 vs C9',
-      field2: 'C8 vs C10',
-    },
-    {
-      time: '1:00 - 1:55',
-      field1: 'A2 vs A3',
-      field2: 'B5 vs B6',
+      field1: 'A1 vs A3',
+      field2: 'B4 vs B6',
+      field3: 'C7 vs C9',
     },
     {
       time: '2:00 - 2:55',
-      field1: 'C7 vs C10',
-      field2: 'C8 vs C9',
+      field1: 'A2 vs A3',
+      field2: 'B5 vs B6',
+      field3: 'C8 vs C9',
     },
   ];
   fixtures35: Fixture35[] = [
     {
-      time: '9:00 - 9:55',
-      field3: 'A1 vs A2',
-    },
-    {
-      time: '10:00 - 10:55',
-      field3: 'A3 vs A4',
-    },
-    {
       time: '11:00 - 11:55',
-      field3: 'A1 vs A3',
+      field1: 'A1 vs A2',
+      field2: 'A3 vs A4',
     },
     {
-      time: '12:30 - 1:25',
-      field3: 'A2 vs A4',
-    },
-    {
-      time: '1:30 - 2:25',
-      field3: 'A1 vs A4',
-    },
-    {
-      time: '2:30 - 3:25',
-      field3: 'A2 vs A3',
+      time: '1:00 - 1:55',
+      field1: 'A1 vs A3',
+      field2: 'A2 vs A4',
     },
   ];
 
   fixtures2: Fixture[] = [
     {
       time: '4:00 - 4:55',
-      field1: '(Winner of A vs Runner up of B) - U',
-      field2: '(Winner of C vs 2nd Best Runner up of D) - W',
+      field1: 'A (Seed 1 vs Seed 8)',
+      field2: 'B (Seed 3 vs Seed 6)',
+      field3: '',
     },
   ];
   fixtures3: Fixture[] = [
     {
       time: '4:00 - 4:55',
-      field1: '(Winner of B vs Runner up of A) - V',
-      field2: '(Runner up of C vs Best Runner up of D) - X',
+      field1: 'C (Seed 2 vs Seed 7)',
+      field2: 'D (Seed 4 vs Seed 5)',
+      field3: '',
     },
   ];
   fixtures4: Fixture[] = [
     {
-      time: '9:30 - 10:35',
-      field1: '(Winner of U vs Winner of V) - Y',
-      field2: '',
-    },
-  ];
-  fixtures5: Fixture[] = [
-    {
-      time: '10:45 - 11:50',
-      field1: '(Winner of W vs Winner of X) - Z',
-      field2: '',
+      time: '10:30 - 11:45',
+      field1: '(Winner of Poll 1A vs Winner of Poll 1B)',
+      field2: '(Winner of Poll 2A vs Winner of Poll 2B)',
+      field3: '',
     },
   ];
   fixtures6: Fixture[] = [
     {
       time: '2:00 - 3:05',
-      field1: '(Winner of Y vs Winner of Z)',
+      field1: '(Winner of Poll 1 vs Winner of Poll 2)',
       field2: '',
+      field3: '',
+    },
+  ];
+
+  fixtures335: Fixture35[] = [
+    {
+      time: '9:30 - 10:25',
+      field1: 'A1 vs A4',
+      field2: 'A2 vs A3',
     },
   ];
 
   fixtures235: Fixture35[] = [
     {
-      time: '12:00 - 1:05',
-      field3: '(Winner of A vs Runner Up of A)',
+      time: '12:30 - 1:35',
+      field1: '(Winner of A vs Runner Up of A)',
+      field2: '',
     },
   ];
 
   results = [
     { fixture: 'A1 vs A2', result: '' },
-    { fixture: 'B3 vs B5', result: '' },
+    { fixture: 'B4 vs B5', result: '' },
     { fixture: 'C7 vs C8', result: '' },
-    { fixture: 'C9 vs C10', result: '' },
     { fixture: 'A1 vs A3', result: '' },
     { fixture: 'B4 vs B6', result: '' },
     { fixture: 'C7 vs C9', result: '' },
-    { fixture: 'C8 vs C10', result: '' },
     { fixture: 'A2 vs A3', result: '' },
     { fixture: 'B5 vs B6', result: '' },
-    { fixture: 'C7 vs C10', result: '' },
     { fixture: 'C8 vs C9', result: '' },
-    { fixture: '(Winner of A vs Runner up of B) - U', result: '' },
-    { fixture: '(Winner of C vs 2nd Best Runner up of D) - W', result: '' },
-    { fixture: '(Winner of B vs Runner up of A) - V', result: '' },
-    { fixture: '( Runner up of C vs Best Runner up of D) - X', result: '' },
-    { fixture: '(Winner of U vs Winner of V) - Y', result: '' },
-    { fixture: '(Winner of W vs Winner of X) - Z', result: '' },
-    { fixture: '(Winner of Y vs Winner of Z) ', result: '' },
+    { fixture: 'A (Seed 1 vs Seed 8)', result: '' },
+    { fixture: 'B (Seed 3 vs Seed 6)', result: '' },
+    { fixture: 'C (Seed 2 vs Seed 7)', result: '' },
+    { fixture: 'D (Seed 4 vs Seed 5)', result: '' },
+    { fixture: '(Winner of Poll 1A vs Winner of Poll 1B)', result: '' },
+    { fixture: '(Winner of Poll 2A vs Winner of Poll 2B)', result: '' },
+    { fixture: '(Winner of 1 vs Winner of 2) ', result: '' },
   ];
 
   results35 = [
@@ -203,16 +179,59 @@ export class TournamentComponent {
   }
 
   teamsRegular = [
-    { name: 'LA Gurans', roster: ['Player 1', 'Player 2', 'Player 3'] },
-    { name: 'Team 2', roster: ['Player A', 'Player B', 'Player C'] },
-    { name: 'Team 3', roster: ['Player X', 'Player Y', 'Player Z'] },
-    { name: 'Team 4', roster: ['Player L', 'Player M', 'Player N'] },
-    { name: 'Team 5', roster: ['Player A', 'Player B', 'Player C'] },
-    { name: 'Team 6', roster: ['Player X', 'Player Y', 'Player Z'] },
-    { name: 'Team 7', roster: ['Player L', 'Player M', 'Player N'] },
-    { name: 'Team 8', roster: ['Player A', 'Player B', 'Player C'] },
-    { name: 'Team 9', roster: ['Player X', 'Player Y', 'Player Z'] },
-    { name: 'Team 10', roster: ['Player L', 'Player M', 'Player N'] },
+    {
+      name: 'LA Gurans Red',
+      roster: [
+        'Sajal Nepal (GK)',
+        'Ronal Dhungel',
+        'Shlok Wagle',
+        'Kritishwa Aryal',
+        'Sandesh Parajuli',
+        'Sohan Thapa',
+        'Ajay KC',
+        'Manish Khadka',
+        'Shreeyash Dhakal',
+        'Nikol Shrestha',
+        'Aakash Bhandari',
+        'Bibek Adhikari',
+      ],
+    },
+    {
+      name: 'LA Gurans Blue',
+      roster: [
+        'Kushal Khattri',
+        'Aayush Bhattarai',
+        'Saurav Limbu',
+        'Sagar Limbu',
+        'Nabin Rimal',
+        'Keshab Neupane',
+        'Bikesh Shrestha',
+        'Paswat Shah',
+        'Sujit Gurung',
+        'Amit Gurung',
+        'Ramesh Dangal',
+        'Aaryav Adhikari',
+      ],
+    },
+    {
+      name: 'Sagarmatha Warriors',
+      roster: ['Player X', 'Player Y', 'Player Z'],
+    },
+    { name: 'Gorkhali Squad', roster: ['Player L', 'Player M', 'Player N'] },
+    { name: 'Texas FC Red', roster: ['Player A', 'Player B', 'Player C'] },
+    { name: 'Texas FC Blue', roster: ['Player X', 'Player Y', 'Player Z'] },
+    {
+      name: 'Dallas Gurkhas White',
+      roster: ['Player L', 'Player M', 'Player N'],
+    },
+    {
+      name: 'Dallas Gurkhas Red',
+      roster: ['Player A', 'Player B', 'Player C'],
+    },
+    {
+      name: 'Sunnyvale Football Force',
+      roster: ['Player X', 'Player Y', 'Player Z'],
+    },
   ];
 
   showRosterIndex: number | null = null;
@@ -224,9 +243,9 @@ export class TournamentComponent {
 
   teams35 = [
     { name: 'LA Gurans', roster: ['Player 1', 'Player 2', 'Player 3'] },
-    { name: 'Team 2', roster: ['Player A', 'Player B', 'Player C'] },
-    { name: 'Team 3', roster: ['Player X', 'Player Y', 'Player Z'] },
-    { name: 'Team 4', roster: ['Player L', 'Player M', 'Player N'] },
+    { name: 'DFW Himalayas FC', roster: ['Player A', 'Player B', 'Player C'] },
+    { name: 'Bay Area FC', roster: ['Player X', 'Player Y', 'Player Z'] },
+    { name: 'Nepal Seattle FC', roster: ['Player L', 'Player M', 'Player N'] },
   ];
 
   showRoster35Index: number | null = null;
