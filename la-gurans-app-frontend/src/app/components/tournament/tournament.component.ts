@@ -23,63 +23,50 @@ export class TournamentComponent {
   }
   standingsGroups = [
     [
-      { name: 'Team A (1)', points: 0, played: 0 },
-      { name: 'Team B (2)', points: 0, played: 0 },
-      { name: 'Team C (3)', points: 0, played: 0 },
+      { name: 'Gorkhali Squad', points: 0, played: 0 },
+      { name: 'LA Gurans Red', points: 0, played: 0 },
+      { name: 'Texas FC Red', points: 0, played: 0 },
     ],
     [
-      { name: 'Team D (4)', points: 0, played: 0 },
-      { name: 'Team E (5)', points: 0, played: 0 },
-      { name: 'Team F (6)', points: 0, played: 0 },
+      { name: 'Dallas Gurkhas White', points: 0, played: 0 },
+      { name: 'LA Gurans Blue', points: 0, played: 0 },
+      { name: 'Sunnyvale FC', points: 0, played: 0 },
     ],
     [
-      { name: 'Team G (7)', points: 0, played: 0 },
-      { name: 'Team H (8)', points: 0, played: 0 },
-      { name: 'Team I (9)', points: 0, played: 0 },
+      { name: 'Sagarmatha Warriors', points: 0, played: 0 },
+      { name: 'Dallas Gurkhas Red', points: 0, played: 0 },
+      { name: 'Texas FC Blue', points: 0, played: 0 },
     ],
   ];
   standingsGroups35 = [
     [
-      { name: 'Team A (1)', points: 0, played: 0 },
-      { name: 'Team B (2)', points: 0, played: 0 },
-      { name: 'Team C (3)', points: 0, played: 0 },
-      { name: 'Team D (4)', points: 0, played: 0 },
+      { name: 'Nepal Seattle FC', points: 0, played: 0 },
+      { name: 'DFW Himalayas', points: 0, played: 0 },
+      { name: 'Bay Area FC', points: 0, played: 0 },
+      { name: 'LA Gurans', points: 0, played: 0 },
     ],
   ];
 
   fixtures: Fixture[] = [
     {
       time: '10:00 - 10:55',
-      field1: 'A1 vs A2',
-      field2: 'B4 vs B5',
-      field3: 'C7 vs C8',
+      field1: 'Gorkhali Squad vs LA Gurans Red',
+      field2: 'Dallas Gurkhas White vs LA Gurans Blue',
+      field3: 'Sagarmatha Warriors vs Dallas Gurkhas Red',
     },
     {
       time: '12:00 - 12:55',
-      field1: 'A1 vs A3',
-      field2: 'B4 vs B6',
-      field3: 'C7 vs C9',
+      field1: 'Gorkhali Squad vs Texas FC Red',
+      field2: 'Dallas Gurkhas White vs Sunnyvale FC',
+      field3: 'Sagarmatha Warriors vs Texas FC Blue',
     },
     {
       time: '2:00 - 2:55',
-      field1: 'A2 vs A3',
-      field2: 'B5 vs B6',
-      field3: 'C8 vs C9',
+      field1: 'LA Gurans Red vs Texas FC Red',
+      field2: 'LA Gurans Blue vs Sunnyvale FC',
+      field3: 'Dallas Gurkhas Red vs Texas FC Blue',
     },
   ];
-  fixtures35: Fixture35[] = [
-    {
-      time: '11:00 - 11:55',
-      field1: 'A1 vs A2',
-      field2: 'A3 vs A4',
-    },
-    {
-      time: '1:00 - 1:55',
-      field1: 'A1 vs A3',
-      field2: 'A2 vs A4',
-    },
-  ];
-
   fixtures2: Fixture[] = [
     {
       time: '4:00 - 4:55',
@@ -112,15 +99,18 @@ export class TournamentComponent {
       field3: '',
     },
   ];
-
-  fixtures335: Fixture35[] = [
+  fixtures35: Fixture35[] = [
     {
-      time: '9:30 - 10:25',
-      field1: 'A1 vs A4',
-      field2: 'A2 vs A3',
+      time: '11:00 - 11:55',
+      field1: 'Nepal Seattle FC vs DFW Himalayas',
+      field2: 'Bay Area FC vs LA Gurans',
+    },
+    {
+      time: '1:00 - 1:55',
+      field1: 'Nepal Seattle FC vs Bay Area FC',
+      field2: 'DFW Himalayas vs LA Gurans',
     },
   ];
-
   fixtures235: Fixture35[] = [
     {
       time: '12:30 - 1:35',
@@ -129,8 +119,16 @@ export class TournamentComponent {
     },
   ];
 
+  fixtures335: Fixture35[] = [
+    {
+      time: '9:30 - 10:25',
+      field1: 'Nepal Seattle FC vs LA Gurans',
+      field2: 'DFW Himalayas vs Bay Area FC',
+    },
+  ];
+
   results = [
-    { fixture: 'A1 vs A2', result: '' },
+    { fixture: 'Gorkhali Squad vs LA Gurans Red', result: '' },
     { fixture: 'B4 vs B5', result: '' },
     { fixture: 'C7 vs C8', result: '' },
     { fixture: 'A1 vs A3', result: '' },
@@ -180,7 +178,7 @@ export class TournamentComponent {
 
   teamsRegular = [
     {
-      name: 'LA Gurans Red',
+      name: 'LA Gurans Blue',
       roster: [
         'Sajal Nepal (GK)',
         'Ronal Dhungel',
@@ -197,7 +195,7 @@ export class TournamentComponent {
       ],
     },
     {
-      name: 'LA Gurans Blue',
+      name: 'LA Gurans Red',
       roster: [
         'Kushal Khattri',
         'Aayush Bhattarai',
@@ -281,7 +279,20 @@ export class TournamentComponent {
     },
     {
       name: 'Dallas Gurkhas White',
-      roster: ['Player L', 'Player M', 'Player N'],
+      roster: [
+        'Kushal Timalsina',
+        'Sudu Subba',
+        'Govinda KC',
+        'Subham Basnet',
+        'Nirakar KC',
+        'Ram Devkota',
+        'Pratik Thapa',
+        'Dave Rizal',
+        'Ayush Thapa',
+        'Nabin KC',
+        'Gyapan Pathak',
+        'Paras Rawal',
+      ],
     },
     {
       name: 'Dallas Gurkhas Red',
@@ -302,7 +313,20 @@ export class TournamentComponent {
     },
     {
       name: 'Sunnyvale Football Force',
-      roster: ['Player X', 'Player Y', 'Player Z'],
+      roster: [
+        'Anubhav Bhattarai',
+        'Eakraj Raut',
+        'Aryaman Dahal',
+        'Salil Subedi',
+        'Suraj Thapa',
+        'Nabin Gurung',
+        'Sonam Budhathoki',
+        'Yugal Magar',
+        'Prakat Rijal',
+        'Bhanu Raut',
+        'Dipesh Chhetri',
+        'Prasanth Thapa',
+      ],
     },
   ];
 
@@ -365,7 +389,23 @@ export class TournamentComponent {
         'Nirmal Gurung',
       ],
     },
-    { name: 'Nepal Seattle FC', roster: ['Player L', 'Player M', 'Player N'] },
+    {
+      name: 'Nepal Seattle FC',
+      roster: [
+        'Sajal Nepal',
+        'Sachin Gurung',
+        'Biplab Khatri',
+        'Ashok Adhikari',
+        'Manoj Poudel',
+        'Umesh Pandey',
+        'Sarad Timilsina',
+        'Binod Bista',
+        'Gyapan Pathak',
+        'Sameer Bam Malla',
+        'Subodh Moktan',
+        'Rabi Tamrakar',
+      ],
+    },
   ];
 
   showRoster35Index: number | null = null;
