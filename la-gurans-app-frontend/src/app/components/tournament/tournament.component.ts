@@ -70,16 +70,16 @@ export class TournamentComponent {
   fixtures2: Fixture[] = [
     {
       time: '4:00 - 4:55',
-      field1: '(A1 vs Best Runner Up) - 1A',
-      field2: '(C1 vs Second Best Runner Up) - 1B',
+      field1: '(A (Winner) vs Best Runner Up) - 1A',
+      field2: '(C (Winner) vs Second Best Runner Up) - 1B',
       field3: '',
     },
   ];
   fixtures3: Fixture[] = [
     {
       time: '4:00 - 4:55',
-      field1: '(B1 vs C2) - 2A',
-      field2: '(B2 vs A2) - 2B',
+      field1: '(B (Winner) vs C (Runner Up)) - 2A',
+      field2: '(B (Winner) vs A (Runner Up)) - 2B',
       field3: '',
     },
   ];
