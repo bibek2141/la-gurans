@@ -23,7 +23,7 @@ export class TournamentComponent {
   }
   standingsGroups = [
     [
-      { name: 'Gorkhali Squad', points: 0, played: 0 },
+      { name: 'Gorkhali Squad FC', points: 0, played: 0 },
       { name: 'LA Gurans Red', points: 0, played: 0 },
       { name: 'Texas FC Red', points: 0, played: 0 },
     ],
@@ -33,7 +33,7 @@ export class TournamentComponent {
       { name: 'Sunnyvale FC', points: 0, played: 0 },
     ],
     [
-      { name: 'Sagarmatha Warriors', points: 0, played: 0 },
+      { name: 'Sagarmatha Warriors FC', points: 0, played: 0 },
       { name: 'Dallas Gurkhas Red', points: 0, played: 0 },
       { name: 'Texas FC Blue', points: 0, played: 0 },
     ],
@@ -50,15 +50,15 @@ export class TournamentComponent {
   fixtures: Fixture[] = [
     {
       time: '10:00 - 10:55',
-      field1: 'Gorkhali Squad vs LA Gurans Red',
+      field1: 'Gorkhali Squad FC vs LA Gurans Red',
       field2: 'Dallas Gurkhas White vs LA Gurans Blue',
-      field3: 'Sagarmatha Warriors vs Dallas Gurkhas Red',
+      field3: 'Sagarmatha Warriors FC vs Dallas Gurkhas Red',
     },
     {
       time: '12:00 - 12:55',
-      field1: 'Gorkhali Squad vs Texas FC Red',
+      field1: 'Gorkhali Squad FC vs Texas FC Red',
       field2: 'Dallas Gurkhas White vs Sunnyvale FC',
-      field3: 'Sagarmatha Warriors vs Texas FC Blue',
+      field3: 'Sagarmatha Warriors FC vs Texas FC Blue',
     },
     {
       time: '2:00 - 2:55',
@@ -70,16 +70,16 @@ export class TournamentComponent {
   fixtures2: Fixture[] = [
     {
       time: '4:00 - 4:55',
-      field1: 'A (Seed 1 vs Seed 8)',
-      field2: 'B (Seed 3 vs Seed 6)',
+      field1: '(A1 vs Best Runner Up) - 1A',
+      field2: '(C1 vs Second Best Runner Up) - 1B',
       field3: '',
     },
   ];
   fixtures3: Fixture[] = [
     {
       time: '4:00 - 4:55',
-      field1: 'C (Seed 2 vs Seed 7)',
-      field2: 'D (Seed 4 vs Seed 5)',
+      field1: '(B1 vs C2) - 2A',
+      field2: '(B2 vs A2) - 2B',
       field3: '',
     },
   ];
@@ -128,31 +128,31 @@ export class TournamentComponent {
   ];
 
   results = [
-    { fixture: 'Gorkhali Squad vs LA Gurans Red', result: '' },
-    { fixture: 'B4 vs B5', result: '' },
-    { fixture: 'C7 vs C8', result: '' },
-    { fixture: 'A1 vs A3', result: '' },
-    { fixture: 'B4 vs B6', result: '' },
-    { fixture: 'C7 vs C9', result: '' },
-    { fixture: 'A2 vs A3', result: '' },
-    { fixture: 'B5 vs B6', result: '' },
-    { fixture: 'C8 vs C9', result: '' },
-    { fixture: 'A (Seed 1 vs Seed 8)', result: '' },
-    { fixture: 'B (Seed 3 vs Seed 6)', result: '' },
-    { fixture: 'C (Seed 2 vs Seed 7)', result: '' },
-    { fixture: 'D (Seed 4 vs Seed 5)', result: '' },
-    { fixture: '(Winner of Poll 1A vs Winner of Poll 1B)', result: '' },
-    { fixture: '(Winner of Poll 2A vs Winner of Poll 2B)', result: '' },
-    { fixture: '(Winner of 1 vs Winner of 2) ', result: '' },
+    { fixture: 'Gorkhali Squad FC vs LA Gurans Red', result: '' },
+    { fixture: 'Dallas Gurkhas White vs LA Gurans Blue', result: '' },
+    { fixture: 'Sagarmatha Warriors FC vs Dallas Gurkhas Red', result: '' },
+    { fixture: 'Gorkhali Squad FC vs Texas FC Red', result: '' },
+    { fixture: 'Dallas Gurkhas White vs Sunnyvale FC', result: '' },
+    { fixture: 'Sagarmatha Warriors FC vs Texas FC Blue', result: '' },
+    { fixture: 'LA Gurans Red vs Texas FC Red', result: '' },
+    { fixture: 'LA Gurans Blue vs Sunnyvale FC', result: '' },
+    { fixture: 'Dallas Gurkhas Red vs Texas FC Blue', result: '' },
+    { fixture: 'A1 vs Best Runner Up - 1A', result: '' },
+    { fixture: 'C1 vs Second Best Runner Up - 1B', result: '' },
+    { fixture: 'B1 vs C2 - 2A', result: '' },
+    { fixture: 'B2 vs A2 -2B', result: '' },
+    { fixture: '(Winner of Poll 1A vs Winner of Poll 1B) - A', result: '' },
+    { fixture: '(Winner of Poll 2A vs Winner of Poll 2B) - B', result: '' },
+    { fixture: '(Winner of Poll 1 vs Winner of Poll 2) ', result: '' },
   ];
 
   results35 = [
-    { fixture: 'A1 vs A2', result: '' },
-    { fixture: 'A3 vs A4', result: '' },
-    { fixture: 'A1 vs A3', result: '' },
-    { fixture: 'A2 vs A4', result: '' },
-    { fixture: 'A1 vs A4', result: '' },
-    { fixture: 'A2 vs A3', result: '' },
+    { fixture: 'Nepal Seattle FC vs DFW Himalayas', result: '' },
+    { fixture: 'Bay Area FC vs LA Gurans', result: '' },
+    { fixture: 'Nepal Seattle FC vs Bay Area FC', result: '' },
+    { fixture: 'DFW Himalayas vs LA Gurans', result: '' },
+    { fixture: 'Nepal Seattle FC vs LA Gurans', result: '' },
+    { fixture: 'DFW Himala vs A3', result: '' },
     { fixture: 'Winner of A vs Runner up of A', result: '' },
   ];
 
@@ -212,7 +212,7 @@ export class TournamentComponent {
       ],
     },
     {
-      name: 'Sagarmatha Warriors',
+      name: 'Sagarmatha Warriors FC',
       roster: [
         'Dhiraj Achammi',
         'Rohan Pandey',
@@ -229,7 +229,7 @@ export class TournamentComponent {
       ],
     },
     {
-      name: 'Gorkhali Squad',
+      name: 'Gorkhali Squad FC',
       roster: [
         'Santosh Adhikari',
         'Ram Paudel',
