@@ -70,16 +70,16 @@ export class TournamentComponent {
   fixtures2: Fixture[] = [
     {
       time: '4:00 - 4:55',
-      field1: '(A (Winner) vs Best Runner Up) - 1A',
-      field2: '(C (Winner) vs Second Best Runner Up) - 1B',
+      field1: 'A (Winner) vs Best Runner Up - 1A',
+      field2: 'C (Winner) vs Second Best Runner Up - 1B',
       field3: '',
     },
   ];
   fixtures3: Fixture[] = [
     {
       time: '4:00 - 4:55',
-      field1: '(B (Winner) vs C (Runner Up)) - 2A',
-      field2: '(B (Winner) vs A (Runner Up)) - 2B',
+      field1: 'B (Winner) vs C (Runner Up) - 2A',
+      field2: 'B (Runner Up) vs A (Runner Up) - 2B',
       field3: '',
     },
   ];
@@ -140,7 +140,7 @@ export class TournamentComponent {
     { fixture: 'A (Winner) vs Best Runner Up - 1A', result: '' },
     { fixture: 'C (Winner) vs Second Best Runner Up - 1B', result: '' },
     { fixture: 'B (Winner) vs C (Runner Up) - 2A', result: '' },
-    { fixture: 'B (Winner) vs A (Runner Up) -2B', result: '' },
+    { fixture: 'B (Runner Up) vs A (Runner Up) -2B', result: '' },
     { fixture: '(Winner of Poll 1A vs Winner of Poll 1B) - A', result: '' },
     { fixture: '(Winner of Poll 2A vs Winner of Poll 2B) - B', result: '' },
     { fixture: '(Winner of Poll 1 vs Winner of Poll 2) ', result: '' },
