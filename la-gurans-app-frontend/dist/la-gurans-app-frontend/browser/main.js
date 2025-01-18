@@ -61967,23 +61967,25 @@ var TournamentComponent = class _TournamentComponent {
     {
       name: "LA Gurans Red",
       roster: [
-        "Kushal Khattri",
+        "Bikesh Shrestha",
         "Aayush Bhattarai",
+        "Kushal Khattri",
         "Saurav Limbu",
         "Sagar Limbu",
         "Nabin Rimal",
-        "Keshab Neupane",
-        "Bikesh Shrestha",
+        "Santosh Parajuli",
         "Paswat Shah",
         "Sujit Gurung",
         "Amit Gurung",
         "Ramesh Dangal",
-        "Aaryav Adhikari"
+        "Aryan Pathak"
       ]
     },
     {
       name: "Sagarmatha Warriors FC",
       roster: [
+        "Saksham Thapa",
+        "Nibesh Pandey",
         "Dhiraj Achammi",
         "Rohan Pandey",
         "Pratik Lamichhane",
@@ -61991,9 +61993,7 @@ var TournamentComponent = class _TournamentComponent {
         "Arish Adhikari",
         "Rijan Adhikari",
         "Subash Sapkota",
-        "Saksham Thapa",
         "Kushan Rana",
-        "Nibesh Pandey",
         "Bijesh Dhakal",
         "David Karki"
       ]
@@ -62007,11 +62007,11 @@ var TournamentComponent = class _TournamentComponent {
         "Bijay Thapa",
         "Peshal Thapa",
         "Prajwal Shrestha",
-        "Prashanta Shrestha",
-        "Resham Lama",
         "Keshab Acharya",
+        "Resham Lama",
+        "Prem Kumar Ghale",
         "Sandip Dahal",
-        "Krishna Baskota",
+        "Aryan Silwal",
         "Ananta Timilsina"
       ]
     },
@@ -62057,17 +62057,17 @@ var TournamentComponent = class _TournamentComponent {
         "Nirakar KC",
         "Ram Devkota",
         "Pratik Thapa",
-        "Dave Rizal",
+        "Niranjan KC",
         "Ayush Thapa",
         "Nabin KC",
         "Gyapan Pathak",
-        "Paras Rawal"
+        "Binod Bista"
       ]
     },
     {
       name: "Dallas Gurkhas Red",
       roster: [
-        "Niranjan KC",
+        "Rajendra Thapa",
         "Parth Thapa",
         "Bijay Tamang",
         "Umesh Pandey",
@@ -62077,8 +62077,8 @@ var TournamentComponent = class _TournamentComponent {
         "Rojin Prajapati",
         "Riwas Prasai",
         "Arogaya Shrestha",
-        "Bindo Bista",
-        "Bikash Magar"
+        "Tenzin Samdup",
+        "Dave Rijal"
       ]
     },
     {
@@ -62145,7 +62145,7 @@ var TournamentComponent = class _TournamentComponent {
         "Ashutosh Parajuli",
         "Sandesh Siwakoti",
         "Ravi Shrestha",
-        "Dipesh Shrestha",
+        "Rahil Taulaje",
         "Basanta Dahal",
         "Rupak Thapa",
         "Utsav Joshi",
