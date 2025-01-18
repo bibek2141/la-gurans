@@ -42,6 +42,9 @@ export class MembersComponent {
     { name: 'Sushant Singh', position: 'Member' },
     { name: 'Prabin Tuladhar', position: 'Member' },
     { name: 'Sujit Gurung', position: 'Member' },
+    { name: 'Rohan Pandey', position: 'Member' },
+    { name: 'Shreeyash Dhakal', position: 'Member' },
+    { name: 'Aakash Bhandari', position: 'Member' },
   ];
 }
 
