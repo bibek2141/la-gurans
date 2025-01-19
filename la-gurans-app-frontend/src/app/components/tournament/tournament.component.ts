@@ -28,9 +28,9 @@ export class TournamentComponent {
       { name: 'Gorkhali Squad FC', points: 0, played: 2 },
     ],
     [
-      { name: 'Dallas Gurkhas White', points: 3, played: 2 },
-      { name: 'LA Gurans Blue', points: 3, played: 2 },
       { name: 'Sunnyvale FC', points: 3, played: 2 },
+      { name: 'LA Gurans Blue', points: 3, played: 2 },
+      { name: 'Dallas Gurkhas White', points: 3, played: 2 },
     ],
     [
       { name: 'Dallas Gurkhas Red', points: 6, played: 2 },
@@ -143,7 +143,7 @@ export class TournamentComponent {
     },
     {
       fixture: 'C (Winner) vs D2 (Dallas Gurkhas Red vs Gorkhali Squad)',
-      result: '3-8',
+      result: '8-3',
     },
     {
       fixture: 'B (Winner) vs C (Runner Up) (Sunnyvale FC vs Texas FC Blue)',
