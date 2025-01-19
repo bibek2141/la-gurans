@@ -23,27 +23,27 @@ export class TournamentComponent {
   }
   standingsGroups = [
     [
-      { name: 'Gorkhali Squad FC', points: 0, played: 0 },
-      { name: 'LA Gurans Red', points: 0, played: 0 },
-      { name: 'Texas FC Red', points: 0, played: 0 },
+      { name: 'Texas FC Red', points: 6, played: 2 },
+      { name: 'LA Gurans Red', points: 3, played: 2 },
+      { name: 'Gorkhali Squad FC', points: 0, played: 2 },
     ],
     [
-      { name: 'Dallas Gurkhas White', points: 0, played: 0 },
-      { name: 'LA Gurans Blue', points: 0, played: 0 },
-      { name: 'Sunnyvale FC', points: 0, played: 0 },
+      { name: 'Sunnyvale FC', points: 3, played: 2 },
+      { name: 'Dallas Gurkhas White', points: 3, played: 2 },
+      { name: 'LA Gurans Blue', points: 3, played: 2 },
     ],
     [
-      { name: 'Sagarmatha Warriors FC', points: 0, played: 0 },
-      { name: 'Dallas Gurkhas Red', points: 0, played: 0 },
-      { name: 'Texas FC Blue', points: 0, played: 0 },
+      { name: 'Dallas Gurkhas Red', points: 6, played: 2 },
+      { name: 'Texas FC Blue', points: 3, played: 2 },
+      { name: 'Sagarmatha Warriors FC', points: 0, played: 2 },
     ],
   ];
   standingsGroups35 = [
     [
-      { name: 'Nepal Seattle FC', points: 0, played: 0 },
-      { name: 'DFW Himalayas', points: 0, played: 0 },
-      { name: 'Bay Area FC', points: 0, played: 0 },
-      { name: 'LA Gurans', points: 0, played: 0 },
+      { name: 'Nepal Seattle FC', points: 4, played: 2 },
+      { name: 'DFW Himalayas', points: 4, played: 2 },
+      { name: 'Bay Area FC', points: 0, played: 2 },
+      { name: 'LA Gurans', points: 3, played: 2 },
     ],
   ];
 
@@ -128,31 +128,40 @@ export class TournamentComponent {
   ];
 
   results = [
-    { fixture: 'Gorkhali Squad FC vs LA Gurans Red', result: '' },
-    { fixture: 'Dallas Gurkhas White vs LA Gurans Blue', result: '' },
-    { fixture: 'Sagarmatha Warriors FC vs Dallas Gurkhas Red', result: '' },
-    { fixture: 'Gorkhali Squad FC vs Texas FC Red', result: '' },
-    { fixture: 'Dallas Gurkhas White vs Sunnyvale FC', result: '' },
-    { fixture: 'Sagarmatha Warriors FC vs Texas FC Blue', result: '' },
-    { fixture: 'LA Gurans Red vs Texas FC Red', result: '' },
-    { fixture: 'LA Gurans Blue vs Sunnyvale FC', result: '' },
-    { fixture: 'Dallas Gurkhas Red vs Texas FC Blue', result: '' },
-    { fixture: 'A (Winner) vs Best Runner Up - 1A', result: '' },
-    { fixture: 'C (Winner) vs Second Best Runner Up - 1B', result: '' },
-    { fixture: 'B (Winner) vs C (Runner Up) - 2A', result: '' },
-    { fixture: 'B (Runner Up) vs A (Runner Up) -2B', result: '' },
-    { fixture: '(Winner of Poll 1A vs Winner of Poll 1B) - A', result: '' },
-    { fixture: '(Winner of Poll 2A vs Winner of Poll 2B) - B', result: '' },
+    { fixture: 'Gorkhali Squad FC vs LA Gurans Red', result: '1-3' },
+    { fixture: 'Dallas Gurkhas White vs LA Gurans Blue', result: '2-1' },
+    { fixture: 'Sagarmatha Warriors FC vs Dallas Gurkhas Red', result: '0-9' },
+    { fixture: 'Gorkhali Squad FC vs Texas FC Red', result: '0-8' },
+    { fixture: 'Dallas Gurkhas White vs Sunnyvale FC', result: '1-3' },
+    { fixture: 'Sagarmatha Warriors FC vs Texas FC Blue', result: '0-7' },
+    { fixture: 'LA Gurans Red vs Texas FC Red', result: '1-10' },
+    { fixture: 'LA Gurans Blue vs Sunnyvale FC', result: '4-3' },
+    { fixture: 'Dallas Gurkhas Red vs Texas FC Blue', result: '2-1' },
+    { fixture: 'A (Winner) vs D1 (Texas Red Vs Dallas White)', result: '3-1' },
+    {
+      fixture: 'C (Winner) vs D2 (Dallas Red vs Gorkhali Squad)',
+      result: '3-8',
+    },
+    {
+      fixture: 'B (Winner) vs C (Runner Up) (Sunnyvale vs Texas Blue)',
+      result: '4-8',
+    },
+    {
+      fixture: 'B (Runner Up) vs A (Runner Up) (LA Blue Vs LA Red)',
+      result: '3-0',
+    },
+    { fixture: '(LA Blue vs Texas Blue) - A', result: '' },
+    { fixture: '(Texas Red vs Dallas Red) - B', result: '' },
     { fixture: '(Winner of Poll 1 vs Winner of Poll 2) ', result: '' },
   ];
 
   results35 = [
-    { fixture: 'Nepal Seattle FC vs DFW Himalayas', result: '' },
-    { fixture: 'Bay Area FC vs LA Gurans', result: '' },
-    { fixture: 'Nepal Seattle FC vs Bay Area FC', result: '' },
-    { fixture: 'DFW Himalayas vs LA Gurans', result: '' },
+    { fixture: 'Nepal Seattle FC vs DFW Himalayas', result: '3-3' },
+    { fixture: 'Bay Area FC vs LA Gurans', result: '1-3' },
+    { fixture: 'Nepal Seattle FC vs Bay Area FC', result: '8-1' },
+    { fixture: 'DFW Himalayas vs LA Gurans', result: '2-1' },
     { fixture: 'Nepal Seattle FC vs LA Gurans', result: '' },
-    { fixture: 'DFW Himala vs A3', result: '' },
+    { fixture: 'DFW Himalayas vs A3', result: '' },
     { fixture: 'Winner of A vs Runner up of A', result: '' },
   ];
 
