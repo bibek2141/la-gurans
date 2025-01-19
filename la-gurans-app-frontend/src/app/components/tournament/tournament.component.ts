@@ -29,8 +29,8 @@ export class TournamentComponent {
     ],
     [
       { name: 'Dallas Gurkhas White', points: 3, played: 2 },
-      { name: 'Sunnyvale FC', points: 3, played: 2 },
       { name: 'LA Gurans Blue', points: 3, played: 2 },
+      { name: 'Sunnyvale FC', points: 3, played: 2 },
     ],
     [
       { name: 'Dallas Gurkhas Red', points: 6, played: 2 },
@@ -87,7 +87,7 @@ export class TournamentComponent {
     {
       time: '10:30 - 11:45',
       field1: '(LA Gurans Blue vs Texas FC Blue) - 1',
-      field2: '(Texas FC Red vs Dallas Gurkhas Red)',
+      field2: '(Texas FC Red vs Dallas Gurkhas Red) - 2',
       field3: '',
     },
   ];
