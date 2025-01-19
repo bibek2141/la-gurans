@@ -28,8 +28,8 @@ export class TournamentComponent {
       { name: 'Gorkhali Squad FC', points: 0, played: 2 },
     ],
     [
-      { name: 'Sunnyvale FC', points: 3, played: 2 },
       { name: 'Dallas Gurkhas White', points: 3, played: 2 },
+      { name: 'Sunnyvale FC', points: 3, played: 2 },
       { name: 'LA Gurans Blue', points: 3, played: 2 },
     ],
     [
@@ -42,8 +42,8 @@ export class TournamentComponent {
     [
       { name: 'Nepal Seattle FC', points: 4, played: 2 },
       { name: 'DFW Himalayas', points: 4, played: 2 },
-      { name: 'Bay Area FC', points: 0, played: 2 },
       { name: 'LA Gurans', points: 3, played: 2 },
+      { name: 'Bay Area FC', points: 0, played: 2 },
     ],
   ];
 
