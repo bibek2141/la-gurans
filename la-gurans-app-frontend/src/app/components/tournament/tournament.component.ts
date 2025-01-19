@@ -70,24 +70,24 @@ export class TournamentComponent {
   fixtures2: Fixture[] = [
     {
       time: '4:00 - 4:55',
-      field1: 'A (Winner) vs Best Runner Up - 1A',
-      field2: 'C (Winner) vs Second Best Runner Up - 1B',
+      field1: 'A (Winner) vs D1 (Texas FC Red Vs Dallas Gurkhas FC White)',
+      field2: 'C (Winner)vs D2 (Dallas Gurkhas Red vs Gorkhali Squad)',
       field3: '',
     },
   ];
   fixtures3: Fixture[] = [
     {
       time: '4:00 - 4:55',
-      field1: 'B (Winner) vs C (Runner Up) - 2A',
-      field2: 'B (Runner Up) vs A (Runner Up) - 2B',
+      field1: 'B (Winner)vs C(Runner up) (Sunnyvale FC vs Texas FC Blue)',
+      field2: 'B(Runner up) vs A (Runner up) LA Gurans Blue Vs LA Gurans Red',
       field3: '',
     },
   ];
   fixtures4: Fixture[] = [
     {
       time: '10:30 - 11:45',
-      field1: '(Winner of Poll 1A vs Winner of Poll 1B)',
-      field2: '(Winner of Poll 2A vs Winner of Poll 2B)',
+      field1: '(LA Gurans Blue vs Texas FC Blue) - 1',
+      field2: '(Texas FC Red vs Dallas Gurkhas Red)',
       field3: '',
     },
   ];
@@ -137,21 +137,25 @@ export class TournamentComponent {
     { fixture: 'LA Gurans Red vs Texas FC Red', result: '1-10' },
     { fixture: 'LA Gurans Blue vs Sunnyvale FC', result: '4-3' },
     { fixture: 'Dallas Gurkhas Red vs Texas FC Blue', result: '2-1' },
-    { fixture: 'A (Winner) vs D1 (Texas Red Vs Dallas White)', result: '3-1' },
     {
-      fixture: 'C (Winner) vs D2 (Dallas Red vs Gorkhali Squad)',
+      fixture: 'A (Winner) vs D1 (Texas FC Red Vs Dallas Gurkhas White)',
+      result: '3-1',
+    },
+    {
+      fixture: 'C (Winner) vs D2 (Dallas Gurkhas Red vs Gorkhali Squad)',
       result: '3-8',
     },
     {
-      fixture: 'B (Winner) vs C (Runner Up) (Sunnyvale vs Texas Blue)',
+      fixture: 'B (Winner) vs C (Runner Up) (Sunnyvale FC vs Texas FC Blue)',
       result: '4-8',
     },
     {
-      fixture: 'B (Runner Up) vs A (Runner Up) (LA Blue Vs LA Red)',
+      fixture:
+        'B (Runner Up) vs A (Runner Up) (LA Gurans Blue Vs LA Gurans Red)',
       result: '3-0',
     },
-    { fixture: '(LA Blue vs Texas Blue) - A', result: '' },
-    { fixture: '(Texas Red vs Dallas Red) - B', result: '' },
+    { fixture: '(LA Gurans Blue vs Texas FC Blue) - 1', result: '' },
+    { fixture: '(Texas FC Red vs Dallas Gurkhas Red) - 2', result: '' },
     { fixture: '(Winner of Poll 1 vs Winner of Poll 2) ', result: '' },
   ];
 
