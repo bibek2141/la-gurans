@@ -40,10 +40,10 @@ export class TournamentComponent {
   ];
   standingsGroups35 = [
     [
-      { name: 'Nepal Seattle FC', points: 4, played: 2 },
-      { name: 'DFW Himalayas', points: 4, played: 2 },
-      { name: 'LA Gurans', points: 3, played: 2 },
-      { name: 'Bay Area FC', points: 0, played: 2 },
+      { name: 'DFW Himalayas', points: 7, played: 3 },
+      { name: 'Nepal Seattle FC', points: 5, played: 3 },
+      { name: 'LA Gurans', points: 3, played: 3 },
+      { name: 'Bay Area FC', points: 0, played: 3 },
     ],
   ];
 
@@ -154,9 +154,12 @@ export class TournamentComponent {
         'B (Runner Up) vs A (Runner Up) (LA Gurans Blue Vs LA Gurans Red)',
       result: '3-0',
     },
-    { fixture: '(LA Gurans Blue vs Texas FC Blue) - 1', result: '' },
-    { fixture: '(Texas FC Red vs Dallas Gurkhas Red) - 2', result: '' },
-    { fixture: '(Winner of Poll 1 vs Winner of Poll 2) ', result: '' },
+    { fixture: '(LA Gurans Blue vs Texas FC Blue) - 1', result: '2-7' },
+    { fixture: '(Texas FC Red vs Dallas Gurkhas Red) - 2', result: '2-7' },
+    {
+      fixture: '(Texas FC Blue vs Dallas Gurkhas Red) ',
+      result: '3-3 (p) Winner Texas FC Blue',
+    },
   ];
 
   results35 = [
@@ -164,9 +167,9 @@ export class TournamentComponent {
     { fixture: 'Bay Area FC vs LA Gurans', result: '1-3' },
     { fixture: 'Nepal Seattle FC vs Bay Area FC', result: '8-1' },
     { fixture: 'DFW Himalayas vs LA Gurans', result: '2-1' },
-    { fixture: 'Nepal Seattle FC vs LA Gurans', result: '' },
-    { fixture: 'DFW Himalayas vs A3', result: '' },
-    { fixture: 'Winner of A vs Runner up of A', result: '' },
+    { fixture: 'Nepal Seattle FC vs LA Gurans', result: '2-2' },
+    { fixture: 'DFW Himalayas vs Bay Area FC', result: '2-1' },
+    { fixture: 'DFW Himalays vs Nepal Seattle FC', result: '0-4' },
   ];
 
   showTournamentRules = false;
