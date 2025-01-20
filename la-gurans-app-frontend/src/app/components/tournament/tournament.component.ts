@@ -10,7 +10,7 @@ import { Fixture, Fixture35 } from '../../models/fixtures.model';
   styleUrl: './tournament.component.css',
 })
 export class TournamentComponent {
-  selectedTab: string = 'fixtures';
+  selectedTab: string = 'results';
   selectedMainTab: string = 'regular';
 
   selectMainTab(tab: string) {
