@@ -15,7 +15,7 @@ export class TournamentComponent {
 
   selectMainTab(tab: string) {
     this.selectedMainTab = tab;
-    this.selectedTab = 'fixtures';
+    this.selectedTab = 'results';
   }
 
   selectTab(tab: string) {
