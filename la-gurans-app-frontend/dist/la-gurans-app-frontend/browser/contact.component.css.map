@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["src/app/components/contact/contact.component.css"],
-  "sourcesContent": [".mt-16 {\r\n  margin-top: 10rem;\r\n}\r\n"],
-  "mappings": ";AAAA,CAAC;AACC,cAAY;AACd;",
-  "names": []
-}
