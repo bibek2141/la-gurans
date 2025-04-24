@@ -11,6 +11,7 @@ import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 })
 export class AboutUsComponent {
   slides: Slide[] = [
+    { image: 'img17.jpg', caption: 'Nepali New Year Cup, Seattle, 2025' },
     { image: 'img16.jpg', caption: 'LA Gurans Cup, Los Angeles, 2025' },
     { image: 'img1.jpg', caption: 'Gurkha Cup, San Francisco, 2023' },
     { image: 'img2.jpg', caption: 'Gurkha Cup, San Francisco, 2023 35+' },
